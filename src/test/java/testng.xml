@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" thread-count="1">
+
+<!--    <test name="Device_1_iPhone7Plus" >-->
+<!--        <parameter name="deviceName" value="iPhone7Plus"/>-->
+<!--        <parameter name="udid" value="440f2f438738b5ff18b6e8a10866867bb2c9c0de"/>-->
+<!--        <parameter name="version" value="15.4"/>-->
+<!--        <parameter name="port" value="4723"/>-->
+<!--        <parameter name="systemPort" value="8202"/>-->
+<!--        <classes>-->
+<!--            <class name="Runner.CucumberRun">-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="Device_2_iPhone11" >
+        <parameter name="deviceName" value="iPhone11"/>
+        <parameter name="udid" value="00008030-000459C80A90402E"/>
+        <parameter name="version" value="16.0.2"/>
+        <parameter name="port" value="4723"/>
+        <parameter name="systemPort" value="8203"/>
+        <classes>
+            <class name="Runner.CucumberRun"></class>
+            <class name="Runner.CucumberFailedRun"></class>
+        </classes>
+    </test>
+
+<!--    <test name="Device_4_iPhone12_Pro_Max" >-->
+<!--        <parameter name="deviceName" value="iPhone_Hayri"/>-->
+<!--        <parameter name="udid" value="00008101-001269163E47001E"/>-->
+<!--        <parameter name="version" value="15.4"/>-->
+<!--        <parameter name="port" value="4723"/>-->
+<!--        <parameter name="systemPort" value="8204"/>-->
+<!--        <classes>-->
+<!--            <class name="Runner.CucumberRun">-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
