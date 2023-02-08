@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import Tests.BaseTest;
+import Tests.BaseTest;
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;
@@ -22,10 +23,10 @@ import io.cucumber.testng.TestNGCucumberRunner;
 //        tags = "@VegaFirin",
 //        tags = "@ApolloKurutucu",
 //        tags = "@SafirBuzdolabi",
-//        tags = "@IcHavaKalitesiOlcum",
+        tags = "@IcHavaKalitesiOlcum",
 //       tags = "@SilverDavlumbaz",
 //        tags = "@SmartPlug",
-        tags = "@SmartLamp",
+//        tags = "@SmartLamp",
 //        tags = {"@Kurallar"},
 //        tags = {"@UrunBagimsizSenaryolar"},
 //        tags = "@Deneme",

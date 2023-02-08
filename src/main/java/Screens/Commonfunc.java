@@ -674,7 +674,7 @@ public class Commonfunc extends BaseScreen {
         driver.removeApp("com.homewhiz.global");
         Thread.sleep(3000);
         System.out.println("Uygulama silindi");
-        driver.installApp("/Users/TestOnay-Yazilim/Projects/HomeWhiz_iOSTest/Apps/HomeWhiz_3.1.13(12).ipa");
+        driver.installApp("/Users/TestOnay-Yazilim/Projects/HomeWhiz_iOSTest/Apps/HomeWhiz_3.1.13(14).ipa");
         Thread.sleep(3000);
         System.out.println("Uygulama yüklendi");
         driver.launchApp();

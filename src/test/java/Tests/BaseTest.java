@@ -17,13 +17,11 @@ public class BaseTest extends ThreadLocalDriver {
     protected Commonfunc commonfunc = null;
     protected BaseScreen baseScreen = null;
     protected NewScenariosScreens newScenariosScreens = null;
-
     public static String appName;
     public static String testDevice;
     public static String testAppVersion;
-
     public WebDriverWait wait;
-    public static String appFile = "HomeWhiz_3.1.13(12).ipa";
+    public static String appFile = "HomeWhiz_3.1.13(14).ipa";
     public static String appPath = System.getProperty("user.dir") + "/Apps/" + appFile;
 
 

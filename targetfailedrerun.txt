@@ -1,1 +1,1 @@
-file:src/test/java/Features/SmartLamp.feature:16:394:436
+file:src/test/java/Features/CamasirMakinesi.feature:430:473:510:555:587:626:686:721:765:831

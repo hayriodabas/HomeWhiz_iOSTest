@@ -2,7 +2,7 @@
 Feature: Smartlamp
 Author: Hayri Odabas
 Date: 2022
-  @SmartLamp
+  @SmartLamp @Deneme
   Scenario:001 SmartLamp Login sonrasi cihazlarin bagli oldugunun kontrolleri
     Given Uygulama resetlenir
     Given Logout yapilir
@@ -16,7 +16,7 @@ Date: 2022
   Scenario:002 SmartLamp cihaz detaylarinin kontrolu
     Given Uygulama resetlenir
     And 30 saniye bekle
-    Then "Lambaaaaaa" detayina gidilir
+    Then "Lamba" detayina gidilir
     And 5 saniye bekle
     And Cihaz bilgilerine tiklanir
     And 5 saniye bekle
