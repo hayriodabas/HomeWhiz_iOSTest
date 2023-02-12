@@ -2,504 +2,504 @@
 Feature: Smartlamp
 Author: Hayri Odabas
 Date: 2022
-  @SmartLamp @Deneme
+  @SmartLamp
   Scenario:001 SmartLamp Login sonrasi cihazlarin bagli oldugunun kontrolleri
-    Given Uygulama resetlenir
-    Given Logout yapilir
-    Given Uygulamaya "mobilotomasyon3@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-    Given Uygulama resetlenir
-    Given 30 saniye bekle
-    Then "Oturma Odası" adi kontrol edilir
-    Then "Lamba" urun kontrolu
-    Then Listede cihazlarin bagli olmadigini belirten ! isaretinin olmadigini kontrol et
+    * Uygulama resetlenir
+    * Logout yapilir
+    * Uygulamaya "mobilotomasyon3@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Oturma Odası" adi kontrol edilir
+    * "Lamba" urun kontrolu
+    * Listede cihazlarin bagli olmadigini belirten ! isaretinin olmadigini kontrol et
   @SmartLamp
   Scenario:002 SmartLamp cihaz detaylarinin kontrolu
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then "Lamba" detayina gidilir
-    And 5 saniye bekle
-    And Cihaz bilgilerine tiklanir
-    And 5 saniye bekle
-    Then "CİHAZ KİMLİĞİ" yazisi kontrol edilir
-    And "Arçelik" markasi kontrol edilir
-    And "9950091100" Model numarasi kontrol edilir
-    And "S999971863053519766183" Digital kimlik no kontrol edilir
-    And "0.10.51" versiyon numarasi kontrol edilir
-    And "C8:B4:22:6E:33:10" yazisi kontrol edilir
-    And navigasyondan geri tusuna basilir
-    Given 5 saniye bekle
-    And navigasyondan geri tusuna basilir
-    Given 5 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Cihaz bilgilerine tiklanir
+    * 5 saniye bekle
+    * "CİHAZ KİMLİĞİ" yazisi kontrol edilir
+    * "Arçelik" markasi kontrol edilir
+    * "9950091100" Model numarasi kontrol edilir
+    * "S999971863053519766183" Digital kimlik no kontrol edilir
+    * "0.10.51" versiyon numarasi kontrol edilir
+    * "C8:B4:22:6E:33:10" yazisi kontrol edilir
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
   @SmartLamp
   Scenario:003 SmartLamp cihazlar ekranindan lamba cihazını acma kapama kontrolu
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then Cihazlarim ekraninda lamba on ise off konumuna getirilir
-    Then Cihazlarim ekraninda lamba off oldugu kontrol edilir
-    Then Lamba cihazlarim ekraninda on yapilir
-    Then 10 saniye bekle
-    And Cihazlarim ekraninda lamba on oldugu kontrol edilir
-    And 10 saniye bekle
-    Then Lamba cihazlarim ekraninda off yapilir
-    And 5 saniye bekle
-    Then Cihazlarim ekraninda lamba off oldugu kontrol edilir
-    And 5 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * Cihazlarim ekraninda lamba on ise off konumuna getirilir
+    * Cihazlarim ekraninda lamba off oldugu kontrol edilir
+    * Lamba cihazlarim ekraninda on yapilir
+    * 10 saniye bekle
+    * Cihazlarim ekraninda lamba on oldugu kontrol edilir
+    * 10 saniye bekle
+    * Lamba cihazlarim ekraninda off yapilir
+    * 5 saniye bekle
+    * Cihazlarim ekraninda lamba off oldugu kontrol edilir
+    * 5 saniye bekle
   @SmartLamp
   Scenario:004 SmartLamp cihaz ekranının kontrolu
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then Lamba cihazlarim ekraninda on yapilir
-    Then 10 saniye bekle
-    Then "Lamba" detayina gidilir
-    And 5 saniye bekle
-    And "Liste" butonuna basilir
-    And 5 saniye bekle
-    Then "Sıcak" elementini bekle
-    Then "Lamba" yazisi kontrol edilir
-    Then "oturma odası" yazisi kontrol edilir
-    Then "Liste" yazisi kontrol edilir
-    Then "Çember" yazisi kontrol edilir
-    Then "Sıcak" yazisi kontrol edilir
-    Then "Gün Işığı" yazisi kontrol edilir
-    Then "Soğuk" yazisi kontrol edilir
-    Then "CİHAZ GEÇMİŞİ" yazisi kontrol edilir
-    Then "Bugün" yazisi icerdigi kontrol edilir
-    Then "Cihaz durumu: Kapalı " yazisi kontrol edilir
-    Then "Cihaz durumu: Açık " yazisi kontrol edilir
-    Then "CİHAZA TANIMLI KURALLAR" yazisi kontrol edilir
-    Then "Henüz kural oluşturmadınız." yazisi kontrol edilir
-    Then "KURAL EKLE" yazisi kontrol edilir
-    Then "İPUÇLARI" yazisi kontrol edilir
-    And "Akıllı Ampülünüzü 7W ve 4000Kelvin özelliği ile enerji verimli kullanabilirsiniz." yazisi kontrol edilir
-    Then Lamba power butonu ile kapatilir
-    Then 10 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * Lamba cihazlarim ekraninda on yapilir
+    * 10 saniye bekle
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * "Liste" butonuna basilir
+    * 5 saniye bekle
+    * "Sıcak" elementini bekle
+    * "Lamba" yazisi kontrol edilir
+    * "oturma odası" yazisi kontrol edilir
+    * "Liste" yazisi kontrol edilir
+    * "Çember" yazisi kontrol edilir
+    * "Sıcak" yazisi kontrol edilir
+    * "Gün Işığı" yazisi kontrol edilir
+    * "Soğuk" yazisi kontrol edilir
+    * "CİHAZ GEÇMİŞİ" yazisi kontrol edilir
+    * "Bugün" yazisi icerdigi kontrol edilir
+    * "Cihaz durumu: Kapalı " yazisi kontrol edilir
+    * "Cihaz durumu: Açık " yazisi kontrol edilir
+    * "CİHAZA TANIMLI KURALLAR" yazisi kontrol edilir
+    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "İPUÇLARI" yazisi kontrol edilir
+    * "Akıllı Ampülünüzü 7W ve 4000Kelvin özelliği ile enerji verimli kullanabilirsiniz." yazisi kontrol edilir
+    * Lamba power butonu ile kapatilir
+    * 10 saniye bekle
 
   @SmartLamp
   Scenario:005 SmartLamp lamba ekranindan cihaz acma kapama kontrolu
-    Given Uygulama resetlenir
-    Then 30 saniye bekle
-    Then Cihazlarim ekraninda lamba on ise off konumuna getirilir
-    Then Cihazlarim ekraninda lamba off oldugu kontrol edilir
-    Then "Lamba" detayina gidilir
-    And 5 saniye bekle
-    Then Lamba power butonu ile acilir
-    And 10 saniye bekle
-    And "Liste" butonuna basilir
-    And 5 saniye bekle
-    Then "Cihaz durumu: Açık " yazisi kontrol edilir
-    And navigasyondan geri tusuna basilir
-    And 5 saniye bekle
-    Then Cihazlarim ekraninda lamba on oldugu kontrol edilir
-    Given Uygulama resetlenir
-    And 10 saniye bekle
-    And "Lamba" detayina gidilir
-    And 5 saniye bekle
-    Then "Cihaz durumu: Açık " yazisi kontrol edilir
-    Then Lamba power butonu ile kapatilir
-    And 10 saniye bekle
-    Then "Cihaz durumu: Kapalı " yazisi kontrol edilir
-#    And navigasyondan geri tusuna basilir
-#    And 5 saniye bekle
-#    Then Cihazlarim ekraninda lamba off oldugu kontrol edilir
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * Cihazlarim ekraninda lamba on ise off konumuna getirilir
+    * Cihazlarim ekraninda lamba off oldugu kontrol edilir
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Lamba power butonu ile acilir
+    * 10 saniye bekle
+    * "Liste" butonuna basilir
+    * 5 saniye bekle
+    * "Cihaz durumu: Açık " yazisi kontrol edilir
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
+    * Cihazlarim ekraninda lamba on oldugu kontrol edilir
+    * Uygulama resetlenir
+    * 10 saniye bekle
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * "Cihaz durumu: Açık " yazisi kontrol edilir
+    * Lamba power butonu ile kapatilir
+    * 10 saniye bekle
+    * "Cihaz durumu: Kapalı " yazisi kontrol edilir
+#    * navigasyondan geri tusuna basilir
+#    * 5 saniye bekle
+#    * Cihazlarim ekraninda lamba off oldugu kontrol edilir
   @SmartLamp
   Scenario:006 SmartLamp power butonu ile acildiktan sonra uygulama arka plana atilip acilinca lambanin acik kalmasi kontrolu
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then "Lamba" detayina gidilir
-    And 5 saniye bekle
-    And Lamba power butonu ile acilir
-    And 10 saniye bekle
-    And "Liste" butonuna basilir
-    And 5 saniye bekle
-    And Ekrani "up" kaydir
-    Then "Cihaz durumu: Açık " yazisi kontrol edilir
-    Then Uygulamayi 30 saniye arka planda tut sonra aktive et
-    And 5 saniye bekle
-    And Ekrani "down" kaydir
-    And 5 saniye bekle
-    Then "Cihaz durumu: Açık " yazisi kontrol edilir
-    And navigasyondan geri tusuna basilir
-    And 5 saniye bekle
-    And Cihazlarim ekraninda lamba on oldugu kontrol edilir
-    Given Uygulama resetlenir
-    And 10 saniye bekle
-    Then "Lamba" detayina gidilir
-    And 5 saniye bekle
-    Then Lamba power butonu ile kapatilir
-    And 10 saniye bekle
-#    And navigasyondan geri tusuna basilir
-#    And 5 saniye bekle
-#    Then Cihazlarim ekraninda lamba off oldugu kontrol edilir
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Lamba power butonu ile acilir
+    * 10 saniye bekle
+    * "Liste" butonuna basilir
+    * 5 saniye bekle
+    * Ekrani "up" kaydir
+    * "Cihaz durumu: Açık " yazisi kontrol edilir
+    * Uygulamayi 30 saniye arka planda tut sonra aktive et
+    * 5 saniye bekle
+    * Ekrani "down" kaydir
+    * 5 saniye bekle
+    * "Cihaz durumu: Açık " yazisi kontrol edilir
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
+    * Cihazlarim ekraninda lamba on oldugu kontrol edilir
+    * Uygulama resetlenir
+    * 10 saniye bekle
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Lamba power butonu ile kapatilir
+    * 10 saniye bekle
+#    * navigasyondan geri tusuna basilir
+#    * 5 saniye bekle
+#    * Cihazlarim ekraninda lamba off oldugu kontrol edilir
   @SmartLamp
   Scenario: 007 SmartLamp cihazi cember gorunumune geçiş ve ekran bilgilerinin kontrolu
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then "Lamba" detayina gidilir
-    And 5 saniye bekle
-    And Lamba power butonu ile acilir
-    And 10 saniye bekle
-    And "Liste" butonuna basilir
-    And 5 saniye bekle
-    Then "oturma odası" adi kontrol edilir
-    Then "Lamba" detayina gidilir
-    And 5 saniye bekle
-    Then "Çember" textine basilir
-    Then Appbar "Lamba" texti kontrol edilir
-    And Appbar subtitle "oturma odası" texti kontrol edilir
-    And "Liste" yazisi kontrol edilir
-    And "Çember" yazisi kontrol edilir
-    And Ekrani "up" kaydir
-    And "CİHAZ GEÇMİŞİ" yazisi kontrol edilir
-    And "Bugün" icerigi konrol edilir
-    Then "Cihaz durumu: Kapalı " yazisi kontrol edilir
-    Then "Cihaz durumu: Açık " yazisi kontrol edilir
-    And "CİHAZA TANIMLI KURALLAR" yazisi kontrol edilir
-    Then "Henüz kural oluşturmadınız." yazisi kontrol edilir
-    And "KURAL EKLE" yazisi kontrol edilir
-    And "İPUÇLARI" yazisi kontrol edilir
-    And "Akıllı Ampülünüzü 7W ve 4000Kelvin özelliği ile enerji verimli kullanabilirsiniz." texti sayfa kaydirmadan bulunur
-    Then Lamba power butonu ile kapatilir
-    And 10 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Lamba power butonu ile acilir
+    * 10 saniye bekle
+    * "Liste" butonuna basilir
+    * 5 saniye bekle
+    * "oturma odası" adi kontrol edilir
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * "Çember" textine basilir
+    * Appbar "Lamba" texti kontrol edilir
+    * Appbar subtitle "oturma odası" texti kontrol edilir
+    * "Liste" yazisi kontrol edilir
+    * "Çember" yazisi kontrol edilir
+    * Ekrani "up" kaydir
+    * "CİHAZ GEÇMİŞİ" yazisi kontrol edilir
+    * "Bugün" icerigi konrol edilir
+    * "Cihaz durumu: Kapalı " yazisi kontrol edilir
+    * "Cihaz durumu: Açık " yazisi kontrol edilir
+    * "CİHAZA TANIMLI KURALLAR" yazisi kontrol edilir
+    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "İPUÇLARI" yazisi kontrol edilir
+    * "Akıllı Ampülünüzü 7W ve 4000Kelvin özelliği ile enerji verimli kullanabilirsiniz." texti sayfa kaydirmadan bulunur
+    * Lamba power butonu ile kapatilir
+    * 10 saniye bekle
 
   @SmartLamp
   Scenario:008 SmartLamp Liste gorunumu uzerinden lamba cihazının renk ve parlaklık degisim kontrolu
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then "Lamba" detayina gidilir
-    And 5 saniye bekle
-    And Lamba power butonu ile acilir
-    And 10 saniye bekle
-    And "Liste" butonuna basilir
-    And 5 saniye bekle
-    Then Soguk renk secilir
-    And 10 saniye bekle
-    Then Parlaklik "0.5" secilir
-    Then 10 saniye bekle
-    Then Kirmizi renk secilir
-    And 10 saniye bekle
-    Then Parlaklik "0.3" secilir
-    Then 10 saniye bekle
-    Then Parlaklik "1.0" secilir
-    Then 10 saniye bekle
-    Then Mor renk secilir
-    And 10 saniye bekle
-    Then Sicak renk secilir
-    Then 10 saniye bekle
-    And Ekrani "up" kaydir
-    Then "Cihaz durumu: Açık " yazisi kontrol edilir
-    Then Lamba power butonu ile kapatilir
-    And 10 saniye bekle
-    Then "Cihaz durumu: Kapalı " yazisi kontrol edilir
-    And navigasyondan geri tusuna basilir
-    And 5 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Lamba power butonu ile acilir
+    * 10 saniye bekle
+    * "Liste" butonuna basilir
+    * 5 saniye bekle
+    * Soguk renk secilir
+    * 10 saniye bekle
+    * Parlaklik "0.5" secilir
+    * 10 saniye bekle
+    * Kirmizi renk secilir
+    * 10 saniye bekle
+    * Parlaklik "0.3" secilir
+    * 10 saniye bekle
+    * Parlaklik "1.0" secilir
+    * 10 saniye bekle
+    * Mor renk secilir
+    * 10 saniye bekle
+    * Sicak renk secilir
+    * 10 saniye bekle
+    * Ekrani "up" kaydir
+    * "Cihaz durumu: Açık " yazisi kontrol edilir
+    * Lamba power butonu ile kapatilir
+    * 10 saniye bekle
+    * "Cihaz durumu: Kapalı " yazisi kontrol edilir
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
   @SmartLamp
   Scenario:009 SmartLamp Cember gorunumu uzerinden lambanin renk degisim kontrolu
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then Lamba cihazlarim ekraninda on yapilir
-    Then 10 saniye bekle
-    Then Cihazlarim ekraninda lamba on oldugu kontrol edilir
-    And "Lamba" detayina gidilir
-    And 5 saniye bekle
-    Then "Çember" textine basilir
-    And 5 saniye bekle
-    Then Cember uzerinden renk degistirilir
-    And 5 saniye bekle
-    Then Parlaklik "0.3" secilir
-    And 5 saniye bekle
-    Then Parlaklik "1.0" secilir
-    And 5 saniye bekle
-    And Ekrani "up" kaydir
-    Then "Cihaz durumu: Açık " yazisi kontrol edilir
-    Then Lamba power butonu ile kapatilir
-    And 10 saniye bekle
-    And Ekrani "up" kaydir
-    Then "Cihaz durumu: Kapalı " yazisi kontrol edilir
-    And navigasyondan geri tusuna basilir
-    And 5 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * Lamba cihazlarim ekraninda on yapilir
+    * 10 saniye bekle
+    * Cihazlarim ekraninda lamba on oldugu kontrol edilir
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * "Çember" textine basilir
+    * 5 saniye bekle
+    * Cember uzerinden renk degistirilir
+    * 5 saniye bekle
+    * Parlaklik "0.3" secilir
+    * 5 saniye bekle
+    * Parlaklik "1.0" secilir
+    * 5 saniye bekle
+    * Ekrani "up" kaydir
+    * "Cihaz durumu: Açık " yazisi kontrol edilir
+    * Lamba power butonu ile kapatilir
+    * 10 saniye bekle
+    * Ekrani "up" kaydir
+    * "Cihaz durumu: Kapalı " yazisi kontrol edilir
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
   @SmartLamb
   Scenario:010 SmartLamb cihazini odalar arasinda tasima kontrolu
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    When "Lamba" detayina gidilir
-    Given 10 saniye bekle
-    Then Lamba cihazini mutfak odasina tasi
-    And 5 saniye bekle
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    And Mutfak odasina gidilir
-    And 5 saniye bekle
-    And "Mutfak" yazisi kontrol edilir
-    Then "Lamba" urun kontrolu
-    When "Lamba" detayina gidilir
-    Given 10 saniye bekle
-    Then Lamba cihazini oturma odasina geri tasi
-    And 10 saniye bekle
-    And Ekrani "right" kaydir
-    And 3 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Lamba" detayina gidilir
+    * 10 saniye bekle
+    * Lamba cihazini mutfak odasina tasi
+    * 5 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * Mutfak odasina gidilir
+    * 5 saniye bekle
+    * "Mutfak" yazisi kontrol edilir
+    * "Lamba" urun kontrolu
+    * "Lamba" detayina gidilir
+    * 10 saniye bekle
+    * Lamba cihazini oturma odasina geri tasi
+    * 10 saniye bekle
+    * Ekrani "right" kaydir
+    * 3 saniye bekle
   @SmartLamp
   Scenario:011 SmartLamp cihazi secenekler menusunun acılması ve seçimlerin kontrolu
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then "Lamba" detayina gidilir
-    And 5 saniye bekle
-    Then Cihaz menusune tiklanir
-    And 5 saniye bekle
-    Then "Cihaz Bilgileri" yazisi kontrol edilir
-    And "Cihaz İşlevselliğini kontrol et" yazisi kontrol edilir
-    And "Oda Değiştir" yazisi kontrol edilir
-    And "Yeniden Adlandır" yazisi kontrol edilir
-    And "Tüketim" yazisi kontrol edilir
-    And "Ürünü sil" yazisi kontrol edilir
-    And "İptal" yazisi kontrol edilir
-    And 5 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Cihaz menusune tiklanir
+    * 5 saniye bekle
+    * "Cihaz Bilgileri" yazisi kontrol edilir
+    * "Cihaz İşlevselliğini kontrol et" yazisi kontrol edilir
+    * "Oda Değiştir" yazisi kontrol edilir
+    * "Yeniden Adlandır" yazisi kontrol edilir
+    * "Tüketim" yazisi kontrol edilir
+    * "Ürünü sil" yazisi kontrol edilir
+    * "İptal" yazisi kontrol edilir
+    * 5 saniye bekle
   @SmartLamp
   Scenario: 012 SmartLamp cihazi tuketim ekrani kontrolu
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then "Lamba" detayina gidilir
-    And 5 saniye bekle
-    Then Cihaz menusune tiklanir
-    And 5 saniye bekle
-    And "Tüketim" textine basilir
-    And 5 saniye bekle
-    Then "Tüketim" yazisi kontrol edilir
-    Then "Cihazınızın toplam çalışma süresini, harcadığı enerji miktarını ve bu miktara bağlı harcama tutarını görüntüleyin." yazisi kontrol edilir
-    And "YILLIK GRAFİK" yazisi kontrol edilir
-    And "SON GÜNCELLEME:" yazisi kontrol edilir
-    And "Anlık güç tüketimi" yazisi kontrol edilir
-    Then "Cihaz şuan çalışmıyor. " yazisi kontrol edilir
-    And "Enerji Tüketimi" yazisi kontrol edilir
-    And "Tüketim Ücreti" yazisi kontrol edilir
-    And "Birim elektrik fiyatı (kWh)" yazisi kontrol edilir
-    Then "Lamba ne kadar harcadı?" yazisi kontrol edilir
-    And "Başlangıç Tarihi" yazisi kontrol edilir
-    And "Bitiş Tarihi" yazisi kontrol edilir
-    Then "HESAPLA" yazisi kontrol edilir
-    Given Uygulamayi 30 saniye arka planda tut sonra aktive et
-    Given 10 saniye bekle
-    Then "Tüketim" yazisi kontrol edilir
-    Then "Cihazınızın toplam çalışma süresini, harcadığı enerji miktarını ve bu miktara bağlı harcama tutarını görüntüleyin." yazisi kontrol edilir
-    And "YILLIK GRAFİK" yazisi kontrol edilir
-    And "SON GÜNCELLEME:" yazisi kontrol edilir
-    And "Anlık güç tüketimi" yazisi kontrol edilir
-    Then "Cihaz şuan çalışmıyor. " yazisi kontrol edilir
-    And "Enerji Tüketimi" yazisi kontrol edilir
-    And "Tüketim Ücreti" yazisi kontrol edilir
-    And "Birim elektrik fiyatı (kWh)" yazisi kontrol edilir
-    Then "Lamba ne kadar harcadı?" yazisi kontrol edilir
-    And "Başlangıç Tarihi" yazisi kontrol edilir
-    And "Bitiş Tarihi" yazisi kontrol edilir
-    Then "HESAPLA" yazisi kontrol edilir
-    Given 5 saniye bekle
-    And navigasyondan geri tusuna basilir
-    Given 5 saniye bekle
-    And navigasyondan geri tusuna basilir
-    Given 5 saniye bekle
-    Then "Lamba" urun kontrolu
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Cihaz menusune tiklanir
+    * 5 saniye bekle
+    * "Tüketim" textine basilir
+    * 5 saniye bekle
+    * "Tüketim" yazisi kontrol edilir
+    * "Cihazınızın toplam çalışma süresini, harcadığı enerji miktarını ve bu miktara bağlı harcama tutarını görüntüleyin." yazisi kontrol edilir
+    * "YILLIK GRAFİK" yazisi kontrol edilir
+    * "SON GÜNCELLEME:" yazisi kontrol edilir
+    * "Anlık güç tüketimi" yazisi kontrol edilir
+    * "Cihaz şuan çalışmıyor. " yazisi kontrol edilir
+    * "Enerji Tüketimi" yazisi kontrol edilir
+    * "Tüketim Ücreti" yazisi kontrol edilir
+    * "Birim elektrik fiyatı (kWh)" yazisi kontrol edilir
+    * "Lamba ne kadar harcadı?" yazisi kontrol edilir
+    * "Başlangıç Tarihi" yazisi kontrol edilir
+    * "Bitiş Tarihi" yazisi kontrol edilir
+    * "HESAPLA" yazisi kontrol edilir
+    * Uygulamayi 30 saniye arka planda tut sonra aktive et
+    * 10 saniye bekle
+    * "Tüketim" yazisi kontrol edilir
+    * "Cihazınızın toplam çalışma süresini, harcadığı enerji miktarını ve bu miktara bağlı harcama tutarını görüntüleyin." yazisi kontrol edilir
+    * "YILLIK GRAFİK" yazisi kontrol edilir
+    * "SON GÜNCELLEME:" yazisi kontrol edilir
+    * "Anlık güç tüketimi" yazisi kontrol edilir
+    * "Cihaz şuan çalışmıyor. " yazisi kontrol edilir
+    * "Enerji Tüketimi" yazisi kontrol edilir
+    * "Tüketim Ücreti" yazisi kontrol edilir
+    * "Birim elektrik fiyatı (kWh)" yazisi kontrol edilir
+    * "Lamba ne kadar harcadı?" yazisi kontrol edilir
+    * "Başlangıç Tarihi" yazisi kontrol edilir
+    * "Bitiş Tarihi" yazisi kontrol edilir
+    * "HESAPLA" yazisi kontrol edilir
+    * 5 saniye bekle
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
+    * "Lamba" urun kontrolu
   @SmartLamp
   Scenario: 013 SmartLamp power butonu ile acildiktan sonra uygulama kill edilip acilinca lambanin acik kalmasi kontrolu
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then "Lamba" detayina gidilir
-    And 5 saniye bekle
-    And Lamba power butonu ile acilir
-    And 10 saniye bekle
-    And "Liste" butonuna basilir
-    And 5 saniye bekle
-    And Ekrani "up" kaydir
-    Then "Cihaz durumu: Açık " yazisi kontrol edilir
-    Then Uygulama kill edilip 20 sn sonra acilir
-    And 10 saniye bekle
-    Then "Lamba" urun kontrolu
-    And Cihazlarim ekraninda lamba on oldugu kontrol edilir
-    Then Cihazlarim ekraninda lamba on ise off konumuna getirilir
-    And 5 saniye bekle
-    Then Cihazlarim ekraninda lamba off oldugu kontrol edilir
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Lamba power butonu ile acilir
+    * 10 saniye bekle
+    * "Liste" butonuna basilir
+    * 5 saniye bekle
+    * Ekrani "up" kaydir
+    * "Cihaz durumu: Açık " yazisi kontrol edilir
+    * Uygulama kill edilip 20 sn sonra acilir
+    * 10 saniye bekle
+    * "Lamba" urun kontrolu
+    * Cihazlarim ekraninda lamba on oldugu kontrol edilir
+    * Cihazlarim ekraninda lamba on ise off konumuna getirilir
+    * 5 saniye bekle
+    * Cihazlarim ekraninda lamba off oldugu kontrol edilir
   @SmartLamp
   Scenario: 014 SmartLamp Liste ve cember gorunumleri uzerinden arka arkaya farkli lamba rengi secimleri yapilmasi kontrolu
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then Lamba cihazlarim ekraninda on yapilir
-    Then 10 saniye bekle
-    And Cihazlarim ekraninda lamba on oldugu kontrol edilir
-    Then "Lamba" detayina gidilir
-    And 5 saniye bekle
-    And "Liste" butonuna basilir
-    And 5 saniye bekle
-    Then Kirmizi renk secilir
-    And 5 saniye bekle
-    Then "Çember" textine basilir
-    And 5 saniye bekle
-    And Cember uzerinden renk degistirilir
-    And 5 saniye bekle
-    Then "Liste" textine basilir
-    Then Mor renk secilir
-    And 5 saniye bekle
-    Then Sicak renk secilir
-    And 5 saniye bekle
-    And Ekrani "up" kaydir
-    Then Lamba power butonu ile kapatilir
-    And 5 saniye bekle
-    And navigasyondan geri tusuna basilir
-    And 3 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * Lamba cihazlarim ekraninda on yapilir
+    * 10 saniye bekle
+    * Cihazlarim ekraninda lamba on oldugu kontrol edilir
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * "Liste" butonuna basilir
+    * 5 saniye bekle
+    * Kirmizi renk secilir
+    * 5 saniye bekle
+    * "Çember" textine basilir
+    * 5 saniye bekle
+    * Cember uzerinden renk degistirilir
+    * 5 saniye bekle
+    * "Liste" textine basilir
+    * Mor renk secilir
+    * 5 saniye bekle
+    * Sicak renk secilir
+    * 5 saniye bekle
+    * Ekrani "up" kaydir
+    * Lamba power butonu ile kapatilir
+    * 5 saniye bekle
+    * navigasyondan geri tusuna basilir
+    * 3 saniye bekle
   @SmartLamp
   Scenario: 015 SmartLamp sayfasında cihaz işlevselliğini kontrol et seçeneğine tıklanır
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then Cihazlarim ekraninda lamba off oldugu kontrol edilir
-    When "Lamba" detayina gidilir
-    Given 5 saniye bekle
-    Then Cihaz menusune tiklanir
-    And "Cihaz İşlevselliğini kontrol et" textine basilir
-    Given 3 saniye bekle
-    Then "Cihaz İşlevselliğini kontrol et" yazisi kontrol edilir
-    Then "CİHAZI BELİRLE" butonuna basilir
-    Given 5 saniye bekle
-    And Carpı isaretine basilip ekran kapatilir
-    Given 5 saniye bekle
-    Then Appbar "Lamba" texti kontrol edilir
-    And Appbar subtitle "oturma odası" texti kontrol edilir
-    And navigasyondan geri tusuna basilir
-    And 3 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * Cihazlarim ekraninda lamba off oldugu kontrol edilir
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Cihaz menusune tiklanir
+    * "Cihaz İşlevselliğini kontrol et" textine basilir
+    * 3 saniye bekle
+    * "Cihaz İşlevselliğini kontrol et" yazisi kontrol edilir
+    * "CİHAZI BELİRLE" butonuna basilir
+    * 5 saniye bekle
+    * Carpı isaretine basilip ekran kapatilir
+    * 5 saniye bekle
+    * Appbar "Lamba" texti kontrol edilir
+    * Appbar subtitle "oturma odası" texti kontrol edilir
+    * navigasyondan geri tusuna basilir
+    * 3 saniye bekle
   @SmartLamp
   Scenario: 016 SmartLamp tüketim detaylarında harcama hesaplaması yapılması
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    When "Lamba" detayina gidilir
-    Given 5 saniye bekle
-    Then Cihaz menusune tiklanir
-    Given 5 saniye bekle
-    And "Tüketim" textine basilir
-    Given 5 saniye bekle
-    And Ekrani "up" kaydir
-    And Ekrani "up" kaydir
-    Given 3 saniye bekle
-    And "Başlangıç Tarihi" textine basilir
-    Given 3 saniye bekle
-    And Lamba baslangic tarih gunu "17" olarak degistirilir
-    Given 3 saniye bekle
-    And "Bitti" butonuna basilir
-    Given 3 saniye bekle
-    And "HESAPLA" textine basilir
-    Given 5 saniye bekle
-    Then "Toplam harcama tutarı" yazisi kontrol edilir
-    Then "TRY" yazisi icerdigi kontrol edilir
-    Then "YENİDEN HESAPLA" yazisi kontrol edilir
-    And navigasyondan geri tusuna basilir
-    Given 5 saniye bekle
-    And navigasyondan geri tusuna basilir
-    Given 5 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Cihaz menusune tiklanir
+    * 5 saniye bekle
+    * "Tüketim" textine basilir
+    * 5 saniye bekle
+    * Ekrani "up" kaydir
+    * Ekrani "up" kaydir
+    * 3 saniye bekle
+    * "Başlangıç Tarihi" textine basilir
+    * 3 saniye bekle
+    * Lamba baslangic tarih gunu "17" olarak degistirilir
+    * 3 saniye bekle
+    * "Bitti" butonuna basilir
+    * 3 saniye bekle
+    * "HESAPLA" textine basilir
+    * 5 saniye bekle
+    * "Toplam harcama tutarı" yazisi kontrol edilir
+    * "TRY" yazisi icerdigi kontrol edilir
+    * "YENİDEN HESAPLA" yazisi kontrol edilir
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
   @SmartLamp
   Scenario: 017 SmartLamp sayfasına Akıllı erişim sayfasından gidilmesinin kontrol edilmesi
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then "Oturma Odası" adi kontrol edilir
-    Then "Lamba" urun kontrolu
-    Then Listede cihazlarin bagli olmadigini belirten ! isaretinin olmadigini kontrol et
-    Then Cihazlarim ekraninda lamba on ise off konumuna getirilir
-    And 5 saniye bekle
-    Then Cihazlarim ekraninda lamba off oldugu kontrol edilir
-    And "Akıllı Erişim" butonuna basilir
-    And 5 saniye bekle
-    And "AKILLI ERIŞIM" yazisi kontrol edilir
-    And "icon quick access lightning" butonuna basilir
-    Given 5 saniye bekle
-    And "AKILLI ERIŞIM" yazisi kontrol edilir
-    Then "Lamba" urun kontrolu
-    When "Lamba" detayina gidilir
-    Given 5 saniye bekle
-    Then Appbar "Lamba" texti kontrol edilir
-    And Appbar subtitle "oturma odası" texti kontrol edilir
-    And Lamba power butonu ile acilir
-    And 10 saniye bekle
-    Then "Liste" yazisi kontrol edilir
-    Then "Liste" butonuna basilir
-    And 5 saniye bekle
-    Then "Çember" yazisi kontrol edilir
-    Then "Sıcak" yazisi kontrol edilir
-    Then "Gün Işığı" yazisi kontrol edilir
-    Then "Soğuk" yazisi kontrol edilir
-    Then Ekrani "up" kaydir
-    Then "CİHAZ GEÇMİŞİ" yazisi kontrol edilir
-    Then "Bugün" yazisi icerdigi kontrol edilir
-    Then "Cihaz durumu: Kapalı " yazisi kontrol edilir
-    Then "Cihaz durumu: Açık " yazisi kontrol edilir
-    Then Lamba power butonu ile kapatilir
-    Then 10 saniye bekle
-    And navigasyondan geri tusuna basilir
-    Given 5 saniye bekle
-    And "AKILLI ERIŞIM" yazisi kontrol edilir
-    Then "Lamba" urun kontrolu
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Oturma Odası" adi kontrol edilir
+    * "Lamba" urun kontrolu
+    * Listede cihazlarin bagli olmadigini belirten ! isaretinin olmadigini kontrol et
+    * Cihazlarim ekraninda lamba on ise off konumuna getirilir
+    * 5 saniye bekle
+    * Cihazlarim ekraninda lamba off oldugu kontrol edilir
+    * "Akıllı Erişim" butonuna basilir
+    * 5 saniye bekle
+    * "AKILLI ERIŞIM" yazisi kontrol edilir
+    * "icon quick access lightning" butonuna basilir
+    * 5 saniye bekle
+    * "AKILLI ERIŞIM" yazisi kontrol edilir
+    * "Lamba" urun kontrolu
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Appbar "Lamba" texti kontrol edilir
+    * Appbar subtitle "oturma odası" texti kontrol edilir
+    * Lamba power butonu ile acilir
+    * 10 saniye bekle
+    * "Liste" yazisi kontrol edilir
+    * "Liste" butonuna basilir
+    * 5 saniye bekle
+    * "Çember" yazisi kontrol edilir
+    * "Sıcak" yazisi kontrol edilir
+    * "Gün Işığı" yazisi kontrol edilir
+    * "Soğuk" yazisi kontrol edilir
+    * Ekrani "up" kaydir
+    * "CİHAZ GEÇMİŞİ" yazisi kontrol edilir
+    * "Bugün" yazisi icerdigi kontrol edilir
+    * "Cihaz durumu: Kapalı " yazisi kontrol edilir
+    * "Cihaz durumu: Açık " yazisi kontrol edilir
+    * Lamba power butonu ile kapatilir
+    * 10 saniye bekle
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
+    * "AKILLI ERIŞIM" yazisi kontrol edilir
+    * "Lamba" urun kontrolu
 
   @SmartLamp
   Scenario: 018 SmartLamp Akıllı erişim sayfasından lamba açılması ve kapanması kontol edilmesi
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then "Oturma Odası" adi kontrol edilir
-    Then "Lamba" urun kontrolu
-    Then Listede cihazlarin bagli olmadigini belirten ! isaretinin olmadigini kontrol et
-    Then Cihazlarim ekraninda lamba on ise off konumuna getirilir
-    And 5 saniye bekle
-    And "Akıllı Erişim" butonuna basilir
-    And 5 saniye bekle
-    And "AKILLI ERIŞIM" yazisi kontrol edilir
-    And "icon quick access lightning" butonuna basilir
-    Given 5 saniye bekle
-    Then "Lamba" urun kontrolu
-    Then Akilli erisim lamba sayfasinda kapali oldugu kontrol edilir
-    Then Akilli erisim lamba sayfasindan lamba on yapilir
-    Given 5 saniye bekle
-    Then Akilli erisim lamba sayfasinda acik oldugu kontrol edilir
-    When "Lamba" detayina gidilir
-    Given 5 saniye bekle
-    Then Appbar "Lamba" texti kontrol edilir
-    And Appbar subtitle "oturma odası" texti kontrol edilir
-    Then Ekrani "up" kaydir
-    Then "Cihaz durumu: Açık " yazisi kontrol edilir
-    And navigasyondan geri tusuna basilir
-    Given 5 saniye bekle
-    And "AKILLI ERIŞIM" yazisi kontrol edilir
-    Then "Lamba" urun kontrolu
-    Then Akilli erisim lamba sayfasinda acik oldugu kontrol edilir
-    Then Akilli erisim lamba sayfasindan lamba off yapilir
-    Given 5 saniye bekle
-    Then Akilli erisim lamba sayfasinda kapali oldugu kontrol edilir
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Oturma Odası" adi kontrol edilir
+    * "Lamba" urun kontrolu
+    * Listede cihazlarin bagli olmadigini belirten ! isaretinin olmadigini kontrol et
+    * Cihazlarim ekraninda lamba on ise off konumuna getirilir
+    * 5 saniye bekle
+    * "Akıllı Erişim" butonuna basilir
+    * 5 saniye bekle
+    * "AKILLI ERIŞIM" yazisi kontrol edilir
+    * "icon quick access lightning" butonuna basilir
+    * 5 saniye bekle
+    * "Lamba" urun kontrolu
+    * Akilli erisim lamba sayfasinda kapali oldugu kontrol edilir
+    * Akilli erisim lamba sayfasindan lamba on yapilir
+    * 5 saniye bekle
+    * Akilli erisim lamba sayfasinda acik oldugu kontrol edilir
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * Appbar "Lamba" texti kontrol edilir
+    * Appbar subtitle "oturma odası" texti kontrol edilir
+    * Ekrani "up" kaydir
+    * "Cihaz durumu: Açık " yazisi kontrol edilir
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
+    * "AKILLI ERIŞIM" yazisi kontrol edilir
+    * "Lamba" urun kontrolu
+    * Akilli erisim lamba sayfasinda acik oldugu kontrol edilir
+    * Akilli erisim lamba sayfasindan lamba off yapilir
+    * 5 saniye bekle
+    * Akilli erisim lamba sayfasinda kapali oldugu kontrol edilir
 
     #BU TESTTE TUKETIM OLCUMLERI OLMALIYDI!!!!!
   @SmartLamp
   Scenario: 019 SmartLamp sayfasında tüketim detayları ekranının kontrol edilmesi
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then "Oturma Odası" adi kontrol edilir
-    Then "Lamba" urun kontrolu
-    Then Lamba cihazlarim ekraninda on yapilir
-    Then 10 saniye bekle
-    And Cihazlarim ekraninda lamba on oldugu kontrol edilir
-    When "Lamba" detayina gidilir
-    And 5 saniye bekle
-    Then "Liste" butonuna basilir
-    And 5 saniye bekle
-    Then Soguk renk secilir
-    And 5 saniye bekle
-    Then Parlaklik "0.5" secilir
-    And 5 saniye bekle
-    Then Cihaz menusune tiklanir
-    Then 5 saniye bekle
-    Then "Tüketim" textine basilir
-    Then 5 saniye bekle
-    Then "kWh" yazisi icerdigi kontrol edilir
-    And navigasyondan geri tusuna basilir
-    Given 5 saniye bekle
-    Then Parlaklik "1.0" secilir
-    Given 5 saniye bekle
-    Then Sicak renk secilir
-    Given 5 saniye bekle
-    And Lamba power butonu ile kapatilir
-    Given 5 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * "Oturma Odası" adi kontrol edilir
+    * "Lamba" urun kontrolu
+    * Lamba cihazlarim ekraninda on yapilir
+    * 10 saniye bekle
+    * Cihazlarim ekraninda lamba on oldugu kontrol edilir
+    * "Lamba" detayina gidilir
+    * 5 saniye bekle
+    * "Liste" butonuna basilir
+    * 5 saniye bekle
+    * Soguk renk secilir
+    * 5 saniye bekle
+    * Parlaklik "0.5" secilir
+    * 5 saniye bekle
+    * Cihaz menusune tiklanir
+    * 5 saniye bekle
+    * "Tüketim" textine basilir
+    * 5 saniye bekle
+    * "kWh" yazisi icerdigi kontrol edilir
+    * navigasyondan geri tusuna basilir
+    * 5 saniye bekle
+    * Parlaklik "1.0" secilir
+    * 5 saniye bekle
+    * Sicak renk secilir
+    * 5 saniye bekle
+    * Lamba power butonu ile kapatilir
+    * 5 saniye bekle
   @SmartLamp
   Scenario: 020 SmartLamp açık ise test kapalı olarak sonlandırılır
-    Given Uygulama resetlenir
-    And 30 saniye bekle
-    Then Cihazlarim ekraninda lamba on ise off konumuna getirilir
-    Given 10 saniye bekle
+    * Uygulama resetlenir
+    * 30 saniye bekle
+    * Cihazlarim ekraninda lamba on ise off konumuna getirilir
+    * 10 saniye bekle

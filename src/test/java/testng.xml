@@ -22,7 +22,7 @@
         <parameter name="systemPort" value="8203"/>
         <classes>
             <class name="Runner.CucumberRun"></class>
-            <class name="Runner.CucumberFailedRun"></class>
+<!--            <class name="Runner.CucumberFailedRun"></class>-->
         </classes>
     </test>
 

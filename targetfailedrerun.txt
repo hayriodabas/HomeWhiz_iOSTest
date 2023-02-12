@@ -1,1 +1,1 @@
-file:src/test/java/Features/CamasirMakinesi.feature:430:473:510:555:587:626:686:721:765:831
+file:src/test/java/Features/SafirBuzdolabi.feature:163:196

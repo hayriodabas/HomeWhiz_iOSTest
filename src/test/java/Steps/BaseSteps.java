@@ -11,6 +11,7 @@ public class BaseSteps extends BaseTest {
     protected Commonfunc commonfunc = null;
     protected BaseScreen baseScreen =null;
     protected NewScenariosScreens newScenariosScreens = null;
+    protected RulesScreens rulesScreens = null;
 
     protected void setupCucumber() {
 
@@ -18,6 +19,7 @@ public class BaseSteps extends BaseTest {
         commonfunc = new Commonfunc(ThreadLocalDriver.getTLDriver());
         baseScreen = new BaseScreen(ThreadLocalDriver.getTLDriver());
         newScenariosScreens = new NewScenariosScreens(ThreadLocalDriver.getTLDriver());
+        rulesScreens = new RulesScreens(ThreadLocalDriver.getTLDriver());
     }
 
 

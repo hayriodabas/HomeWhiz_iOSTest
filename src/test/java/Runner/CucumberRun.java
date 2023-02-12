@@ -23,7 +23,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
 //        tags = "@VegaFirin",
 //        tags = "@ApolloKurutucu",
 //        tags = "@SafirBuzdolabi",
-        tags = "@IcHavaKalitesiOlcum",
+//        tags = "@IcHavaKalitesiOlcum",
 //       tags = "@SilverDavlumbaz",
 //        tags = "@SmartPlug",
 //        tags = "@SmartLamp",
@@ -37,7 +37,8 @@ import io.cucumber.testng.TestNGCucumberRunner;
 //                "@PosiKlima or " +
 //                "@RappleFirin or " +
 //                "@UrunBagimsizSenaryolar or " +
-//                "@CamasirMakinesi or " +
+//                "@Cam15029782
+//                asirMakinesi or " +
 //                "@ApolloKurutucu or " +
 //                "@IcHavaKalitesiOlcum or " +
 //                "@SmartPlug or " +
