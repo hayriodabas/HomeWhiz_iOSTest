@@ -1,6 +1,7 @@
 package Steps;
 
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
 public class RulesSteps extends BaseSteps {
@@ -30,26 +31,10 @@ public class RulesSteps extends BaseSteps {
         rulesScreens.Rules_clickRuleActivationButton();
     }
 
-    @Then("^Kural \"([^\"]*)\" için asagı ok tusuna basilir$")
-    public void kuraliokTusunaBasilir(String arg0) throws Throwable {
-        rulesScreens.Rules_clickMoreArrowRuleButton(arg0);
-    }
-
-    @Then("^Kural \"([^\"]*)\" için sil tusuna basilir$")
-    public void kuraliSilTusunaBasilir(String arg0) throws Throwable {
-        rulesScreens.Rules_clickDeleteRuleButton(arg0);
-    }
-
     @Then("^Kural \"([^\"]*)\" için aktivasyon butonuna basilir$")
     public void kuralAktivasyonButonunaBasilir(String arg0) throws Throwable {
         rulesScreens.Rules_clickActivationButton(arg0);
     }
-
-    @Then("^Kural için oluşturulan sonuça çarpı işareti ile silinir$")
-    public void kuralIçinOluşturulanSonuçaÇarpıIşaretiIleSilinir() {
-        rulesScreens.Rules_deleteRuleResult();
-    }
-
 
     @Then("^Kural başlangıç saati (\\d+) saat ileri set edilir$")
     public void kuralBaşlangıçSaatiSaatIleriSetEdilir(int arg0)  throws InterruptedException{
@@ -69,5 +54,25 @@ public class RulesSteps extends BaseSteps {
     @Then("^Lokasyon izin bilgilendirme metni var ise onayla$")
     public void lokasyonIzinBilgilendirmeMetniVarIseOnayla() {
         rulesScreens.Rules_ApproveLocationPopUp();
+    }
+
+    @And("{string} set edilir")
+    public void setEdilir(String arg0) {
+        rulesScreens.rules_setValue(arg0);
+    }
+
+    @And("Kurallar {string} butonuna basilir")
+    public void kurallarButonunaBasilir(String arg0) {
+        rulesScreens.rules_clickComboItem(arg0);
+    }
+
+    @And("Kural asagi ok tusuna basilir")
+    public void kuralAsagiOkTusunaBasilir() {
+        rulesScreens.Rules_clickMoreArrowRuleButton();
+    }
+
+    @And("Uyari popupi sil butonuna basilir")
+    public void uyariPopupiSilButonunaBasilir() {
+        rulesScreens.rules_clickAlertDelete();
     }
 }

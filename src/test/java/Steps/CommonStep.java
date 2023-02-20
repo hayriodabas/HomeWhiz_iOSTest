@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 
 import java.net.MalformedURLException;
 
@@ -716,11 +717,20 @@ public class CommonStep extends BaseSteps {
     }
 
     @Then("^\"([^\"]*)\" butonunun \"([^\"]*)\" oldugu kontrol edilir$")
-    public void butonununOlduguKontrolEdilir(String arg0, String arg1) throws Throwable {
+    public void butonununOlduguKontrolEdilir(String arg0, String arg1) {
         commonfunc.control_buttonValue(arg0, arg1);
         reportLog(arg0+" butonunun "+arg1+ " oldugu kontrol edilir");
     }
 
+    @And("{string} elementine {string} texti gonderilir")
+    public void elementineTextiGonderilir(String arg0, String arg1) {
+        baseScreen.setValue(By.xpath(arg0), arg1);
+    }
+
+    @And("Uyari popupi {string} butonuna basilir")
+    public void uyariPopupiButonunaBasilir(String arg0) {
+        commonfunc.clickAlertDialogue(arg0);
+    }
 }
 
 

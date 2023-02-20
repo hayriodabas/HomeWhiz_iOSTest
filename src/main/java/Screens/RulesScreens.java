@@ -1,12 +1,11 @@
 package Screens;
 
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 
-import static io.appium.java_client.touch.WaitOptions.waitOptions;
-import static io.appium.java_client.touch.offset.PointOption.point;
-import static java.time.Duration.ofSeconds;
 
 public class RulesScreens extends BaseScreen {
 
@@ -22,15 +21,12 @@ public class RulesScreens extends BaseScreen {
     }
 
     public void Rules_setRuleName(String arg0) {
-        String rule_text = "com.homewhiz.global:id/et_rule_name";
-        setValue(By.id(rule_text), arg0);
-        driver.hideKeyboard();
+        driver.getKeyboard().sendKeys(arg0);
         System.out.println("Kural Adi" + arg0 + "- PASS");
     }
 
-    public void Rules_renameRuleName(String arg0) throws InterruptedException {
+    public void Rules_renameRuleName(String arg0) {
         String rule_text = "com.homewhiz.global:id/et_rename";
-//        clearValue(By.id(rule_text));
         setValue(By.id(rule_text), arg0);
         System.out.println("Kural Adi" + arg0 + " olarak değiştirildi - PASS");
     }
@@ -41,83 +37,78 @@ public class RulesScreens extends BaseScreen {
         System.out.println("Kuralı simdi etkinlestir butonuna basılır - PASS");
     }
 
-    public void Rules_clickDeleteRuleButton(String arg0) {
-        //click_btn(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup["+arg0+"]/android.widget.ImageView[2]"));
-        click_btn(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[" + arg0 + "]/android.view.ViewGroup/android.widget.TextView[2]"));
-        System.out.println("Kural" + arg0 + " sil butonuna basılır - PASS");
-    }
-
-    public void Rules_clickMoreArrowRuleButton(String arg0) {
-        click_btn(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[" + arg0 + "]/android.widget.ImageView[2]"));
-        System.out.println("Kural" + arg0 + " ok butonuna basılır - PASS");
-    }
-
     public void Rules_clickActivationButton(String arg0) {
         click_btn(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[" + arg0 + "]/android.widget.Switch"));
         System.out.println("Kural" + arg0 + "aktivasyon butonuna basılır - PASS");
     }
 
-    public void Rules_deleteRuleResult() {
-        String cross_btn = "com.homewhiz.global:id/tv_delete";
-        click_btn(By.id(cross_btn));
-        System.out.println("Rules sonuç iptal işaretine basildi - PASS");
-    }
+    public void Rules_setHour(int arg0){
+        MobileElement element = (MobileElement) driver.findElementByXPath("//XCUIElementTypePickerWheel[1]");
+        String text = element.getAttribute("value");
 
-    public void Rules_setHour(int try_count) throws InterruptedException {
+        String hour = text.substring(5);
 
-        int endx = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TimePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.Button[1]").getLocation().getX();
-        int startx = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TimePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.Button[2]").getLocation().getX();
+        int hourValue = Integer.parseInt(hour);
 
-        int endy = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TimePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.Button[1]").getLocation().getY();
-        int starty = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TimePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.Button[2]").getLocation().getY();
+        hourValue += arg0;
 
-        for (int i = 0; i < try_count; i++) {
-            new TouchAction(driver).press(point(startx, starty)).waitAction(waitOptions(ofSeconds(1, 10))).moveTo(point(endx, endy)).release().perform();
-            Thread.sleep(500/*2000*/);
+        if (hourValue > 23) {
+            hourValue = 0;
         }
+
+        String hourString = String.format("%02d", hourValue);
+
+        element.setValue(hourString);
+
         System.out.println("set rules hour set - PASS");
     }
 
-    public void Rules_setMinute(int try_count) throws InterruptedException {
+    public void Rules_setMinute(int arg0) {
+        MobileElement element = (MobileElement) driver.findElementByXPath("//XCUIElementTypePickerWheel[2]");
+        String text = element.getAttribute("value");
 
-        int endx = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TimePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[2]/android.widget.Button[1]").getLocation().getX();
-        int startx = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TimePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[2]/android.widget.Button[2]").getLocation().getX();
+        String minute = text.substring(0,2);
 
-        int endy = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TimePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[2]/android.widget.Button[1]").getLocation().getY();
-        int starty = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TimePicker/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[2]/android.widget.Button[2]").getLocation().getY();
+        int minuteValue = Integer.parseInt(minute);
 
-        for (int i = 0; i < try_count; i++) {
-            new TouchAction(driver).press(point(startx, starty)).waitAction(waitOptions(ofSeconds(1, 10))).moveTo(point(endx, endy)).release().perform();
-            Thread.sleep(500/*2000*/);
+        minuteValue += arg0;
+
+        if (minuteValue > 59) {
+            minuteValue = 0;
         }
+
+        String minuteString = String.format("%02d", minuteValue);
+
+        element.setValue(minuteString);
+
         System.out.println("set rules minute set - PASS");
     }
 
     public void Rules_setDay(String day) {
         switch (day) {
             case "Mon":
-                click_btn(By.id("com.homewhiz.global:id/bt_monday"));
+                click_btn(By.xpath("(//XCUIElementTypeStaticText[@name=\"P\"])[1]/parent::* /parent::*"));
                 break;
             case "Tue":
-                click_btn(By.id("com.homewhiz.global:id/bt_tuesday"));
+                click_btn(By.xpath("//XCUIElementTypeStaticText[@name=\"S\"]/parent::* /parent::*"));
                 break;
-            case "Wen":
-                click_btn(By.id("com.homewhiz.global:id/bt_wednesday"));
+            case "Wed":
+                click_btn(By.xpath("//XCUIElementTypeStaticText[@name=\"Ç\"]/parent::* /parent::*"));
                 break;
             case "Thu":
-                click_btn(By.id("com.homewhiz.global:id/bt_thursday"));
+                click_btn(By.xpath("(//XCUIElementTypeStaticText[@name=\"P\"])[2]/parent::* /parent::*"));
                 break;
             case "Fri":
-                click_btn(By.id("com.homewhiz.global:id/bt_friday"));
+                click_btn(By.xpath("(//XCUIElementTypeStaticText[@name=\"C\"])[1]/parent::* /parent::*"));
                 break;
             case "Sat":
-                click_btn(By.id("com.homewhiz.global:id/bt_saturday"));
+                click_btn(By.xpath("(//XCUIElementTypeStaticText[@name=\"C\"])[2]/parent::* /parent::*"));
                 break;
             case "Sun":
-                click_btn(By.id("com.homewhiz.global:id/bt_sunday"));
+                click_btn(By.xpath("(//XCUIElementTypeStaticText[@name=\"P\"])[3]/parent::* /parent::*"));
                 break;
             default:
-                click_btn(By.id("com.homewhiz.global:id/bt_monday"));
+                click_btn(By.xpath("(//XCUIElementTypeStaticText[@name=\"P\"])[1]/parent::* /parent::*"));
         }
         System.out.println("set rules day " + day + " - PASS");
     }
@@ -134,8 +125,35 @@ public class RulesScreens extends BaseScreen {
 //            click_btn(By.xpath("//android.widget.Button[@text='" + approve_text + "']"));
 //        }
 
-        System.out.println("set rules approve popup - PASS");
+        System.out.println("Lokasyon izin bilgilendirme metni var ise onayla - PASS");
     }
 
+    public void rules_setValue(String arg0) {
+        setValue(By.xpath("//XCUIElementTypePickerWheel"), arg0);
+        System.out.println(arg0 + " set edilir - PASS");
+    }
 
+    public void rules_clickComboItem(String arg0) {
+        click_btn(By.xpath("//XCUIElementTypeStaticText[@name= '"+arg0+"']//parent::*"));
+        System.out.println(arg0 + " seçilir - PASS");
+    }
+
+    public void Rules_clickMoreArrowRuleButton() {
+
+        int height = driver.manage().window().getSize().getHeight();
+        int width = driver.manage().window().getSize().getWidth();
+
+        int y = (height / 20) * 7;
+        int x = (width / 10) * 2;
+
+        new TouchAction(driver).press(PointOption.point(x, y)).perform();
+
+        System.out.println("Kural ok butonuna basılır - PASS");
+    }
+
+    public void rules_clickAlertDelete() {
+        click_btn(By.xpath("(//XCUIElementTypeButton[@name=\"Sil\"])[2]"));
+        System.out.println("Uyari popupi sil butonuna basilir - PASS");
+    }
 }
+

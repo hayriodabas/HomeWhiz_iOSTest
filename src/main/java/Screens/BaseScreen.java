@@ -138,7 +138,7 @@ public class BaseScreen<assertFalseDisplayed> {
         action.press(point(btn.getCenter())).waitAction(waitOptions(ofSeconds(arg1))).release().perform();
     }*/
 
-    protected void setValue(By by, String value) {
+    public void setValue(By by, String value) {
         waitVisibility().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
         driver.findElement(by).sendKeys(value);
     }
@@ -211,10 +211,8 @@ public class BaseScreen<assertFalseDisplayed> {
 
         int starty = height / 2;
         int startx = (width / 10) * 9;
-        int endy = height / 2;
-        int endx = width / 10;
+        (new TouchAction(driver)).tap(point(startx,starty)).perform();
 
-        new TouchAction(driver).press(point(endx, endy)).waitAction(waitOptions(ofSeconds(1))).moveTo(point(startx, starty)).release().perform();
         Thread.sleep(60);
     }
 
@@ -286,4 +284,5 @@ public class BaseScreen<assertFalseDisplayed> {
         TouchAction action = new TouchAction(driver);
         action.press(point(btn.getCenter())).waitAction(waitOptions(ofSeconds(arg1))).release().perform();
     }
+
 }

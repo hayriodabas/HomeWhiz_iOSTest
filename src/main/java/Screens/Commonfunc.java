@@ -674,7 +674,7 @@ public class Commonfunc extends BaseScreen {
         driver.removeApp("com.homewhiz.global");
         Thread.sleep(3000);
         System.out.println("Uygulama silindi");
-        driver.installApp("/Users/TestOnay-Yazilim/Projects/HomeWhiz_iOSTest/Apps/HomeWhiz_3.1.13(14).ipa");
+        driver.installApp("/Users/TestOnay-Yazilim/Projects/HomeWhiz_iOSTest/Apps/HomeWhiz_3.1.14(2).ipa");
         Thread.sleep(3000);
         System.out.println("Uygulama yüklendi");
         driver.launchApp();
@@ -786,5 +786,12 @@ public class Commonfunc extends BaseScreen {
             Thread.sleep(3000);
             System.out.println(arg0 + " butonu " + arg1 + " yapıldı - PASS");
         }
+    }
+
+    public void clickAlertDialogue(String arg0) {
+        driver.switchTo().alert();
+        driver.findElement(By.name(arg0));
+        System.out.println("Uyarı ekranı" +arg0+ " tuşuna basilir - PASS" );
+
     }
 }
