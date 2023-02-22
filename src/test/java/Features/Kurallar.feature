@@ -7,7 +7,7 @@ Feature: Kurallar
   Scenario: 001 Kurallar Kurallar ekran bilgilerinin kontrol edilmesi
     * Uygulama resetlenir
     * Logout yapilir
-    * Uygulamaya "mobilotomasyon2@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
+    * Uygulamaya "hayri.odabas@arcelik.com" mail hesabiyla ve "12345678" sifresiyle login olunur
     * Uygulama resetlenir
     * "Oturma Odası" yazisi kontrol edilir
     * "KURALLAR" butonuna basilir
@@ -929,77 +929,11 @@ Feature: Kurallar
 #    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
 #    * "Bu bölümden, cihazlarınızın belirlediğiniz konum, zaman ve cihaz bazlı senaryolara göre çalışmasını sağlayabilirsiniz." yazisi kontrol edilir
 #
-#  @Kurallar
-#  Scenario: 024 Kurallar Apollo Pro D7S için zamanlama kuralı oluşturmanın kontrol edilmesi
-#    * Uygulamaya "hayri.odabas@arcelik.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "KURAL EKLE" textine basilir
-#    * "Zamanlama" textine basilir
-#    * Kural başlangıç saati 2 saat ileri set edilir
-#    * 5 saniye bekle
-#    * Kural başlangıç saati 1 dakika ileri set edilir
-#    * 5 saniye bekle
-#    * Kural gününü "Mon" olarak ayarlanır
-#    * 5 saniye bekle
-#    * "SONRAKİ" butonuna basilir
-#    * "Kuralınızın sonucunu belirleyin." yazisi kontrol edilir
-#    * "Sonuç 1" yazisi kontrol edilir
-#    * "Cihaz Seçin" yazisi kontrol edilir
-#    * "Cihaz Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Apollo Pro D7S" textine basilir
-#    * "Cihaz Sonucunu Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Açık" yazisi kontrol edilir
-#    * "Kapalı" yazisi kontrol edilir
-#    * "Açık" texti listeden seçilir
-#    * "KAYDET" butonuna basilir
-#    * "Sonuç 1: Apollo Pro D7S" yazisi kontrol edilir
-#    * "Sonuç Ekle" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kuralı şimdi etkinleştirin" yazisi kontrol edilir
-#    * Kural adi "Apollo Aç" girilir
-#    * "KAYDET" butonuna basilir
-#    * 5 saniye bekle
-#    * "Apollo Aç kuralı oluşturuldu!" yazisi kontrol edilir
-#    * "TAMAM" butonuna basilir
-#    * 5 saniye bekle
-#    * "Kurallar" yazisi kontrol edilir
-#    * "1 AKTİF" yazisi kontrol edilir
-#    * "1 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "Apollo Aç" yazisi kontrol edilir
-#    * "Zaman Bazlı" yazisi kontrol edilir
-#    * Kural "1" için asagı ok tusuna basilir
-#    * "Apollo Pro D7S" yazisi kontrol edilir
-#    * "Açık" yazisi kontrol edilir
-#    * Cihazlar ikonuna basilir
-#    * 5 saniye bekle
-#    * "Apollo Pro D7S" detayina gidilir
-#    * 5 saniye bekle
-#    * "Apollo Aç" yazisi kontrol edilir
-#    * "Zaman Bazlı" yazisi kontrol edilir
-#    * "Apollo Aç" textine basilir
-#    * 5 saniye bekle
-#    * "1 AKTİF" yazisi kontrol edilir
-#    * "1 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "Apollo Aç" yazisi kontrol edilir
-#    * "Zaman Bazlı" yazisi kontrol edilir
-#    * "Apollo Pro D7S" yazisi kontrol edilir
-#    * "Açık" yazisi kontrol edilir
-#    * "Sil" textine basilir
-#    * 5 saniye bekle
-#    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
-#    * "Bu bölümden, cihazlarınızın belirlediğiniz konum, zaman ve cihaz bazlı senaryolara göre çalışmasını sağlayabilirsiniz." yazisi kontrol edilir
-#
   @Kurallar @Deneme
-  Scenario: 025 Kurallar Rapple Fırın için zamanlama kuralı oluşturmanın kontrol edilmesi
+  Scenario: 024 Kurallar Apollo Pro D7S için zamanlama kuralı oluşturmanın kontrol edilmesi
     * Uygulama resetlenir
     * Logout yapilir
-    * Uygulamaya "hayriodabas@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
+    * Uygulamaya "hayri.odabas@arcelik.com" mail hesabiyla ve "12345678" sifresiyle login olunur
     * Uygulama resetlenir
     * "KURALLAR" butonuna basilir
     * "KURAL EKLE" textine basilir
@@ -1008,56 +942,111 @@ Feature: Kurallar
     * Kural başlangıç saati 5 dakika ileri set edilir
     * Kural gününü "Sun" olarak ayarlanır
     * "SONRAKİ ADIM" butonuna basilir
-    * "Kuralınızın sonucunu belirleyin." yazisi kontrol edilir
+    * "Kuralınızın sonucunu belirleyin" yazisi kontrol edilir
     * "Sonuç 1" yazisi kontrol edilir
     * "Cihaz Seçin" yazisi kontrol edilir
-    * "Cihaz Seçin" textine basilir
-    * 5 saniye bekle
-    * "Rapple Firin" textine basilir
-    * "Cihaz Sonucunu Seçin" textine basilir
-    * 5 saniye bekle
+    * Kurallar "Cihaz Seçin" butonuna basilir
+    * "Apollo Pro D7S" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Seç" textine basilir
+    * "Kapat" yazisi kontrol edilir
+    * Kurallar "Kapat" butonuna basilir
+    * "Aç" set edilir
+    * "Seç" textine basilir
+    * "KAYDET" butonuna basilir
+    * "Sonuç 1: Apollo Pro D7S" yazisi kontrol edilir
+    * "SONUÇ EKLE" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kuralı şimdi aktif hale getir" yazisi kontrol edilir
+    * Kural adi "Apollo Aç" girilir
+    * "Done" butonuna basilir
+    * "KAYDET" butonuna basilir
+    * "Kural ekleme başarıyla tamamlandı!" yazisi kontrol edilir
+    * "TAMAM" butonuna basilir
+    * "KURALLAR" butonuna basilir
+    * "KURALLAR" yazisi kontrol edilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "1 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "Apollo Aç" yazisi kontrol edilir
+    * "Zaman Bazlı" yazisi kontrol edilir
+    * Kural asagi ok tusuna basilir
+    * "Apollo Pro D7S" yazisi kontrol edilir
     * "Açık" yazisi kontrol edilir
-    * "Kapalı" yazisi kontrol edilir
-    * "Açık" texti listeden seçilir
+    * Cihazlar ikonuna basilir
+    * Uygulama resetlenir
+    * "Apollo Pro D7S" detayina gidilir
+    * "Apollo Aç" yazisi kontrol edilir
+    * "Apollo Aç" textine basilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "1 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "Apollo Aç" yazisi kontrol edilir
+    * "Zaman Bazlı" yazisi kontrol edilir
+    * Kural asagi ok tusuna basilir
+    * "Apollo Pro D7S" yazisi kontrol edilir
+    * "Açık" yazisi kontrol edilir
+    * "Sil" butonuna basilir
+    * "Kuralı silmek istediğinize emin misiniz?" yazisi kontrol edilir
+    * Uyari popupi sil butonuna basilir
+    * "Kural bulunamadı" yazisi icerdigi kontrol edilir
+  @Kurallar
+  Scenario: 025 Kurallar Rapple Fırın için zamanlama kuralı oluşturmanın kontrol edilmesi
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "KURAL EKLE" textine basilir
+    * "Zaman Bazlı" textine basilir
+    * Kural başlangıç saati 1 saat ileri set edilir
+    * Kural başlangıç saati 5 dakika ileri set edilir
+    * Kural gününü "Sun" olarak ayarlanır
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kuralınızın sonucunu belirleyin" yazisi kontrol edilir
+    * "Sonuç 1" yazisi kontrol edilir
+    * "Cihaz Seçin" yazisi kontrol edilir
+    * Kurallar "Cihaz Seçin" butonuna basilir
+    * "Rapple Firin" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Aç" set edilir
+    * "Seç" textine basilir
     * "KAYDET" butonuna basilir
     * "Sonuç 1: Rapple Firin" yazisi kontrol edilir
-    * "Sonuç Ekle" yazisi kontrol edilir
-    * "SONRAKİ" butonuna basilir
-    * "Kuralı şimdi etkinleştirin" yazisi kontrol edilir
+    * "SONUÇ EKLE" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kuralı şimdi aktif hale getir" yazisi kontrol edilir
     * Kural adi "Fırınımı Aç" girilir
+    * "Done" butonuna basilir
     * "KAYDET" butonuna basilir
-    * 5 saniye bekle
-    * "Fırınımı Aç kuralı oluşturuldu!" yazisi kontrol edilir
+    * "Kural ekleme başarıyla tamamlandı!" yazisi kontrol edilir
     * "TAMAM" butonuna basilir
-    * 5 saniye bekle
-    * "Kurallar" yazisi kontrol edilir
-    * "1 AKTİF" yazisi kontrol edilir
-    * "1 KURAL" yazisi kontrol edilir
+    * "KURALLAR" yazisi kontrol edilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "1 Kural" yazisi kontrol edilir
     * "KURAL EKLE" yazisi kontrol edilir
     * "Fırınımı Aç" yazisi kontrol edilir
     * "Zaman Bazlı" yazisi kontrol edilir
-    * Kural "1" için asagı ok tusuna basilir
+    * Kural asagi ok tusuna basilir
     * "Rapple Firin" yazisi kontrol edilir
     * "Açık" yazisi kontrol edilir
     * Cihazlar ikonuna basilir
-    * 5 saniye bekle
+    * Uygulama resetlenir
     * "Rapple Firin" detayina gidilir
-    * 5 saniye bekle
     * "Fırınımı Aç" yazisi kontrol edilir
     * "Zaman Bazlı" yazisi kontrol edilir
     * "Fırınımı Aç" textine basilir
-    * 5 saniye bekle
-    * "1 AKTİF" yazisi kontrol edilir
-    * "1 KURAL" yazisi kontrol edilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "1 Kural" yazisi kontrol edilir
     * "KURAL EKLE" yazisi kontrol edilir
     * "Fırınımı Aç" yazisi kontrol edilir
     * "Zaman Bazlı" yazisi kontrol edilir
+    * Kural asagi ok tusuna basilir
     * "Rapple Firin" yazisi kontrol edilir
     * "Açık" yazisi kontrol edilir
-    * "Sil" textine basilir
-    * 5 saniye bekle
-    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
-    * "Bu bölümden, cihazlarınızın belirlediğiniz konum, zaman ve cihaz bazlı senaryolara göre çalışmasını sağlayabilirsiniz." yazisi kontrol edilir
+    * "Sil" butonuna basilir
+    * "Kuralı silmek istediğinize emin misiniz?" yazisi kontrol edilir
+    * Uyari popupi sil butonuna basilir
+    * "Kural bulunamadı" yazisi icerdigi kontrol edilir
 
   @Kurallar
   Scenario: 026 Kurallar E8L BM için zamanlama kuralı oluşturmanın kontrol edilmesi

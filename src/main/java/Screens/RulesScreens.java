@@ -22,7 +22,7 @@ public class RulesScreens extends BaseScreen {
 
     public void Rules_setRuleName(String arg0) {
         driver.getKeyboard().sendKeys(arg0);
-        System.out.println("Kural Adi" + arg0 + "- PASS");
+        System.out.println("Kural Adi " + arg0 + "- PASS");
     }
 
     public void Rules_renameRuleName(String arg0) {
