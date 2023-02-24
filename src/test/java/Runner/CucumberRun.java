@@ -29,7 +29,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
 //        tags = "@SmartLamp",
 //        tags = {"@Kurallar"},
 //        tags = {"@UrunBagimsizSenaryolar"},
-//        tags = "@Deneme",
+        tags = "@Deneme",
 //        tags = "@SilverDavlumbaz or " +
 //                "@Kurallar or " +
 //                "@E8L_BulasikMakinesi or " +

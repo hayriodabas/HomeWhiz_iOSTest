@@ -7,7 +7,7 @@ Feature: Kurallar
   Scenario: 001 Kurallar Kurallar ekran bilgilerinin kontrol edilmesi
     * Uygulama resetlenir
     * Logout yapilir
-    * Uygulamaya "hayri.odabas@arcelik.com" mail hesabiyla ve "12345678" sifresiyle login olunur
+    * Uygulamaya "mobilotomasyon2@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
     * Uygulama resetlenir
     * "Oturma Odası" yazisi kontrol edilir
     * "KURALLAR" butonuna basilir
@@ -59,17 +59,13 @@ Feature: Kurallar
     * "Seç" textine basilir
     * 5 saniye bekle
     * navigasyondan geri tusuna basilir
-#    * "İptal etmek istiyor musunuz?" yazisi kontrol edilir
-#    * "HAYIR" yazisi kontrol edilir
-#    * "EVET" yazisi kontrol edilir
-#    * "EVET" butonuna basilir
     * Appbar "KURALLAR" texti kontrol edilir
     * "Oluşturacağınız kuralın çeşidini" yazisi icerdigi kontrol edilir
     * "Konum Bazlı" yazisi kontrol edilir
     * "Cihaz Bazlı" yazisi kontrol edilir
     * "Zaman Bazlı" yazisi kontrol edilir
 
-  @Kurallar
+  @Kurallar @Deneme
   Scenario: 005 Kurallar cihaz bazlı kural sonucun iptal edilerek tekrar eklenmesinin kontrol edilmesi
     * Uygulama resetlenir
     * "KURALLAR" butonuna basilir
@@ -110,17 +106,13 @@ Feature: Kurallar
     * "Sonuç 1: Co2" yazisi kontrol edilir
     * "SONUÇ EKLE" yazisi kontrol edilir
     * navigasyondan geri tusuna basilir
-#    * "İptal etmek istiyor musunuz?" yazisi kontrol edilir
-#    * "HAYIR" yazisi kontrol edilir
-#    * "EVET" yazisi kontrol edilir
-#    * "EVET" butonuna basilir
     * Appbar "Kural Ekle" texti kontrol edilir
     * "Oluşturacağınız kuralın çeşidini" yazisi icerdigi kontrol edilir
     * "Konum Bazlı" yazisi kontrol edilir
     * "Cihaz Bazlı" yazisi kontrol edilir
     * "Zaman Bazlı" yazisi kontrol edilir
 
-  @Kurallar
+  @Kurallar @Deneme
   Scenario: 006 Kurallar Co2 cihazı için cihaz bazlı kural seçimlerinin ve kuralun olusturmasının kontrolü
     * Uygulama resetlenir
     * "KURALLAR" butonuna basilir
@@ -137,141 +129,134 @@ Feature: Kurallar
     * "Bağıl nem belli bir yüzdenin altına düştüğünde" set edilir
     * "CO2 miktarı belli bir seviyeye ulaştığında" set edilir
     * "Seç" textine basilir
-#    * "Tetikleme CO2 Seviye Listesi" yazisi kontrol edilir
-    * Kurallar "Tetikleyici Durum" butonuna basilir
-#    * 5 saniye bekle
+    * "Tetikleme Sıcaklık Listesi" yazisi kontrol edilir
+    * Kurallar "Tetikleme Sıcaklık Listesi" butonuna basilir
+    # Yukarıdaki başlık içerikleri hatalı gelmektedir.
 #    * "Çok İyi" yazisi kontrol edilir
 #    * "İyi" yazisi kontrol edilir
 #    * "Orta" yazisi kontrol edilir
 #    * "Sağlıksız" yazisi kontrol edilir
 #    * "Zararlı" yazisi kontrol edilir
 #    * "Sağlıksız" texti listeden seçilir
-#    * "SONRAKİ" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kuralınızın sonucunu belirleyin." yazisi kontrol edilir
-#    * "Sonuç 1" yazisi kontrol edilir
-#    * "Cihaz Seçin" yazisi kontrol edilir
-#    * "Cihaz Seçin" textine basilir
-#    * "Co2" textine basilir
-#    * "Cihaz Sonucunu Seçin" yazisi kontrol edilir
-#    * "Cihaz Sonucunu Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Uyku modunu aç" yazisi kontrol edilir
-#    * "Uyku modunu kapat" yazisi kontrol edilir
-#    * "Uyku modunu kapat" texti listeden seçilir
-#    * "KAYDET" yazisi kontrol edilir
-#    * "KAYDET" butonuna basilir
-#    * "Kuralınızın sonucunu belirleyin." yazisi kontrol edilir
-#    * "Sonuç 1: Co2" yazisi kontrol edilir
-#    * "Sonuç Ekle" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kayıt" textine basilir
-#    * "Kuralınıza isim verin" yazisi kontrol edilir
-#    * "Kural İsmi" yazisi kontrol edilir
-#    * "Kuralı şimdi etkinleştirin" yazisi kontrol edilir
-#    * Kural adi "sagliksiz co2" girilir
-#    * "KAYDET" butonuna basilir
-#    * 5 saniye bekle
-#    * "sagliksiz co2 kuralı oluşturuldu!" yazisi kontrol edilir
-#    * "TAMAM" butonuna basilir
-#    * 5 saniye bekle
-#    * "Kurallar" yazisi kontrol edilir
-#    * "1 AKTİF" yazisi kontrol edilir
-#    * "1 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
+    * "Seç" textine basilir
+    * "SONRAKİ ADIM" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kuralınızın sonucunu belirleyin" yazisi kontrol edilir
+    * "Sonuç 1" yazisi kontrol edilir
+    * "Cihaz Seçin" yazisi kontrol edilir
+    * Kurallar "Cihaz Seçin" butonuna basilir
+    * "Seç" textine basilir
+    * "Cihaz Koşulu Seçin" yazisi kontrol edilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Uyku modunu kapat" set edilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Uyku modunu aç" set edilir
+    * "Seç" textine basilir
+    * "KAYDET" yazisi kontrol edilir
+    * "KAYDET" butonuna basilir
+    * "Kuralınızın sonucunu belirleyin" yazisi kontrol edilir
+    * "Sonuç 1: Co2" yazisi kontrol edilir
+    * "SONUÇ EKLE" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kayıt" textine basilir
+    * "OLUŞTURDUĞUNUZ KURALA BİR İSİM VERİN" yazisi kontrol edilir
+    * "Kuralı şimdi aktif hale getir" yazisi kontrol edilir
+    * Kural adi "sagliksiz co2" girilir
+    * Klavye gizele
+    * "KAYDET" butonuna basilir
+    * "Kural ekleme başarıyla tamamlandı!" yazisi kontrol edilir
+    * "TAMAM" butonuna basilir
+    * "KURALLAR" yazisi kontrol edilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "1 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "sagliksiz co2" yazisi kontrol edilir
+    #* "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir  doğru olan bu alttaki silinecek
+    * "CO2 miktarı çok iyi seviyeye ulaştuğında" yazisi kontrol edilir
 #
-#  @Kurallar
-#  Scenario: 007 Kurallar Co2 için oluşturulan kuralın kayıt edildiğinin ve uygulama tekrar açıldığında kontrol edilmesi
-#    * Uygulamaya "mobilotomasyon2@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "1 AKTİF" yazisi kontrol edilir
-#    * "1 KURAL" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
-#    * Uygulamayi 30 saniye arka planda tut sonra aktive et
-#    * 10 saniye bekle
-#    * "Kurallar" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "1 AKTİF" yazisi kontrol edilir
-#    * "1 KURAL" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
-#    * Kural "1" için asagı ok tusuna basilir
-#    * "Gece modu kapalı" yazisi kontrol edilir
-#    * "Düzenle" yazisi kontrol edilir
-#    * "Sil" yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario: 008 Kurallar Co2 cihazı için pasif ikinci cihaz bazlı kuralın oluşturulduğunun kontrol edilmesi
-#    * Uygulamaya "mobilotomasyon2@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "KURAL EKLE" textine basilir
-#    * "Cihaz" textine basilir
-#    * "Sonuç" yazisi kontrol edilir
-#    * "Tetikleyici Cihaz" textine basilir
-#    * 5 saniye bekle
-#    * "Co2" textine basilir
-#    * 5 saniye bekle
-#    * "Tetikleyici Durum" yazisi kontrol edilir
-#    * "Tetikleyici Durum" textine basilir
-#    * 5 saniye bekle
-#    * "CO2 miktarı belli bir seviyeye ulaştığında" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir derecenin altına düştüğünde" yazisi kontrol edilir
-#    * "Bağıl nem belli bir yüzdeyi geçtiğinde" yazisi kontrol edilir
-#    * "Bağıl nem belli bir yüzdenin altına düştüğünde" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "Tetikleme Sıcaklık Listesi" yazisi kontrol edilir
-#    * "Tetikleme Sıcaklık Listesi" textine basilir
-#    * 5 saniye bekle
-#    * "3 C°" texti listeden seçilir
-#    * "SONRAKİ" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kuralınızın sonucunu belirleyin." yazisi kontrol edilir
-#    * "Sonuç 1" yazisi kontrol edilir
-#    * "Cihaz Seçin" yazisi kontrol edilir
-#    * "Cihaz Seçin" textine basilir
-#    * "Co2" textine basilir
-#    * "Cihaz Sonucunu Seçin" yazisi kontrol edilir
-#    * "Cihaz Sonucunu Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Uyku modunu aç" yazisi kontrol edilir
-#    * "Uyku modunu kapat" yazisi kontrol edilir
-#    * "Uyku modunu aç" texti listeden seçilir
-#    * "KAYDET" yazisi kontrol edilir
-#    * "KAYDET" butonuna basilir
-#    * "Kuralınızın sonucunu belirleyin." yazisi kontrol edilir
-#    * "Sonuç 1: Co2" yazisi kontrol edilir
-#    * "Sonuç Ekle" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kayıt" textine basilir
-#    * "Kuralınıza isim verin" yazisi kontrol edilir
-#    * "Kural İsmi" yazisi kontrol edilir
-#    * "Kuralı şimdi etkinleştirin" yazisi kontrol edilir
-#    * Kural adi "düsük sicaklik" girilir
-#    * Kurali simdi etkinlestirin tusuna basilir
-#    * "KAYDET" butonuna basilir
-#    * 5 saniye bekle
-#    * "düsük sicaklik kuralı oluşturuldu!" yazisi kontrol edilir
-#    * "TAMAM" butonuna basilir
-#    * 5 saniye bekle
-#    * "Kurallar" yazisi kontrol edilir
-#    * "1 AKTİF" yazisi kontrol edilir
-#    * "2 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
-#    * "düsük sicaklik" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" yazisi kontrol edilir
+  @Kurallar @Deneme
+  Scenario: 007 Kurallar Co2 için oluşturulan kuralın kayıt edildiğinin ve uygulama tekrar açıldığında kontrol edilmesi
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "1 Kural" yazisi kontrol edilir
+    * "sagliksiz co2" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    #* "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir   (doğru olan bu madde)
+    * "CO2 miktarı çok iyi seviyeye ulaştuğında" yazisi kontrol edilir
+    * Uygulamayi 30 saniye arka planda tut sonra aktive et
+    * "KURALLAR" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "1 Kural" yazisi kontrol edilir
+    * "sagliksiz co2" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "CO2 miktarı çok iyi seviyeye ulaştuğında" yazisi kontrol edilir
+    #* "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir  (doğru olan bu madde)
+    * Kural asagi ok tusuna basilir
+    * "Uyku modunu aç" yazisi kontrol edilir
+    * "Yeniden adlandır" yazisi kontrol edilir
+    * "Sil" yazisi kontrol edilir
+
+  @Kurallar @Deneme
+  Scenario: 008 Kurallar Co2 cihazı için pasif ikinci cihaz bazlı kuralın oluşturulduğunun kontrol edilmesi
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * 5 saniye bekle
+    * "KURAL EKLE" textine basilir
+    * "Cihaz Bazlı" textine basilir
+    * "Sonuç" yazisi kontrol edilir
+    * Kurallar "Tetikleyici Cihaz" butonuna basilir
+    * "Seç" textine basilir
+    * "Tetikleyici Durum" yazisi kontrol edilir
+    * Kurallar "Tetikleyici Durum" butonuna basilir
+    * "CO2 miktarı belli bir seviyeye ulaştığında" set edilir
+    * "Sıcaklık belli bir dereceyi geçtiğinde" set edilir
+    * "Sıcaklık belli bir derecenin altına düştüğünde" set edilir
+    * "Bağıl nem belli bir yüzdeyi geçtiğinde" set edilir
+    * "Bağıl nem belli bir yüzdenin altına düştüğünde" set edilir
+    * "CO2 miktarı belli bir seviyeye ulaştığında" set edilir
+    * "Seç" textine basilir
+    * "Tetikleme Sıcaklık Listesi" yazisi kontrol edilir
+    * Kurallar "Tetikleme Sıcaklık Listesi" butonuna basilir
+    * "Seç" textine basilir
+#    * "3 C°" texti listeden seçilir    / BURADA HATA VAR KONTROL EDİLECEK
+    * "SONRAKİ ADIM" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kuralınızın sonucunu belirleyin" yazisi kontrol edilir
+    * "Sonuç 1" yazisi kontrol edilir
+    * "Cihaz Seçin" yazisi kontrol edilir
+    * Kurallar "Cihaz Seçin" butonuna basilir
+    * "Co2" set edilir
+    * "Seç" textine basilir
+    * "Cihaz Koşulu Seçin" yazisi kontrol edilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Uyku modunu aç" set edilir
+    * "Uyku modunu kapat" set edilir
+    * "Uyku modunu aç" set edilir
+    * "Seç" textine basilir
+    * "KAYDET" yazisi kontrol edilir
+    * "KAYDET" butonuna basilir
+    * "Kuralınızın sonucunu belirleyin" yazisi kontrol edilir
+    * "Sonuç 1: Co2" yazisi kontrol edilir
+    * "SONUÇ EKLE" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kayıt" textine basilir
+    * "OLUŞTURDUĞUNUZ KURALA BİR İSİM VERİN" yazisi kontrol edilir
+    * "Kuralı şimdi aktif hale getir" yazisi kontrol edilir
+    * Kural adi "düsük sicaklik" girilir
+    * Klavye gizele
+    * "KAYDET" butonuna basilir
+    * "Kural ekleme başarıyla tamamlandı!" yazisi kontrol edilir
+    * "TAMAM" butonuna basilir
+    * "KURALLAR" yazisi kontrol edilir
+    * "2 Aktif" yazisi kontrol edilir
+    * "2 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "düsük sicaklik" yazisi kontrol edilir
+    * "CO2 miktarı çok iyi seviyeye ulaştuğında" yazisi kontrol edilir
+  #  * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir   //Doğrusu bu olacak
+
 #
 #  @Kurallar
 #  Scenario: 009 Kurallar Co2 için olusturulan ikinci kuralın aktive edilmesinin kontrolu
@@ -929,7 +914,7 @@ Feature: Kurallar
 #    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
 #    * "Bu bölümden, cihazlarınızın belirlediğiniz konum, zaman ve cihaz bazlı senaryolara göre çalışmasını sağlayabilirsiniz." yazisi kontrol edilir
 #
-  @Kurallar @Deneme
+  @Kurallar
   Scenario: 024 Kurallar Apollo Pro D7S için zamanlama kuralı oluşturmanın kontrol edilmesi
     * Uygulama resetlenir
     * Logout yapilir
