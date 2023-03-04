@@ -17,17 +17,18 @@ public class RulesScreens extends BaseScreen {
     public void Rules_clickOnList(String arg0) {
         String list_text = "//*[@class='android.widget.CheckedTextView' and @text='" + arg0 + "']";
         click_btn(By.xpath(list_text));
-        System.out.println(arg0 + " açık listeden seçildi- PASS");
+        System.out.println(arg0 + " açık listeden seçildi - PASS");
     }
 
     public void Rules_setRuleName(String arg0) {
         driver.getKeyboard().sendKeys(arg0);
-        System.out.println("Kural Adi " + arg0 + "- PASS");
+        System.out.println("Kural Adi " + arg0 + " - PASS");
     }
 
     public void Rules_renameRuleName(String arg0) {
-        String rule_text = "com.homewhiz.global:id/et_rename";
-        setValue(By.id(rule_text), arg0);
+        String rule_text = "//XCUIElementTypeTextField";
+        clearTextField(By.xpath(rule_text));
+        setValue(By.xpath(rule_text), arg0);
         System.out.println("Kural Adi" + arg0 + " olarak değiştirildi - PASS");
     }
 
@@ -35,11 +36,6 @@ public class RulesScreens extends BaseScreen {
         String Activation_btn = "com.homewhiz.global:id/sp_activate_rule";
         click_btn(By.id(Activation_btn));
         System.out.println("Kuralı simdi etkinlestir butonuna basılır - PASS");
-    }
-
-    public void Rules_clickActivationButton(String arg0) {
-        click_btn(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[" + arg0 + "]/android.widget.Switch"));
-        System.out.println("Kural" + arg0 + "aktivasyon butonuna basılır - PASS");
     }
 
     public void Rules_setHour(int arg0){

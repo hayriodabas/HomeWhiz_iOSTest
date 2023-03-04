@@ -6,6 +6,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
@@ -539,14 +540,12 @@ public class Commonfunc extends BaseScreen {
         for(int i = 0; i < 5; i++)
         {
             try {
-                //waitVisibility().until(ExpectedConditions.attributeToBe(By.name(arg0), "name", arg0));
-                //ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name(arg0)));
                 driver.findElementByName(arg0);
                 System.out.println(arg0 + " elementi beklendi - PASS");
                 return;
             }
             catch (Exception e) {
-                System.out.println(arg0 + "elementi bulunamadı: " + i);
+                System.out.println(arg0 + " elementi bulunamadı: " + i);
             }
         }
 

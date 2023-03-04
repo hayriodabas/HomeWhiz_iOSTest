@@ -65,7 +65,7 @@ Feature: Kurallar
     * "Cihaz Bazlı" yazisi kontrol edilir
     * "Zaman Bazlı" yazisi kontrol edilir
 
-  @Kurallar @Deneme
+  @Kurallar
   Scenario: 005 Kurallar cihaz bazlı kural sonucun iptal edilerek tekrar eklenmesinin kontrol edilmesi
     * Uygulama resetlenir
     * "KURALLAR" butonuna basilir
@@ -112,7 +112,7 @@ Feature: Kurallar
     * "Cihaz Bazlı" yazisi kontrol edilir
     * "Zaman Bazlı" yazisi kontrol edilir
 
-  @Kurallar @Deneme
+  @Kurallar
   Scenario: 006 Kurallar Co2 cihazı için cihaz bazlı kural seçimlerinin ve kuralun olusturmasının kontrolü
     * Uygulama resetlenir
     * "KURALLAR" butonuna basilir
@@ -131,13 +131,6 @@ Feature: Kurallar
     * "Seç" textine basilir
     * "Tetikleme Sıcaklık Listesi" yazisi kontrol edilir
     * Kurallar "Tetikleme Sıcaklık Listesi" butonuna basilir
-    # Yukarıdaki başlık içerikleri hatalı gelmektedir.
-#    * "Çok İyi" yazisi kontrol edilir
-#    * "İyi" yazisi kontrol edilir
-#    * "Orta" yazisi kontrol edilir
-#    * "Sağlıksız" yazisi kontrol edilir
-#    * "Zararlı" yazisi kontrol edilir
-#    * "Sağlıksız" texti listeden seçilir
     * "Seç" textine basilir
     * "SONRAKİ ADIM" yazisi kontrol edilir
     * "SONRAKİ ADIM" butonuna basilir
@@ -171,10 +164,9 @@ Feature: Kurallar
     * "1 Kural" yazisi kontrol edilir
     * "KURAL EKLE" yazisi kontrol edilir
     * "sagliksiz co2" yazisi kontrol edilir
-    #* "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir  doğru olan bu alttaki silinecek
-    * "CO2 miktarı çok iyi seviyeye ulaştuğında" yazisi kontrol edilir
-#
-  @Kurallar @Deneme
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
+
+  @Kurallar
   Scenario: 007 Kurallar Co2 için oluşturulan kuralın kayıt edildiğinin ve uygulama tekrar açıldığında kontrol edilmesi
     * Uygulama resetlenir
     * "KURALLAR" butonuna basilir
@@ -182,8 +174,7 @@ Feature: Kurallar
     * "1 Kural" yazisi kontrol edilir
     * "sagliksiz co2" yazisi kontrol edilir
     * "KURAL EKLE" yazisi kontrol edilir
-    #* "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir   (doğru olan bu madde)
-    * "CO2 miktarı çok iyi seviyeye ulaştuğında" yazisi kontrol edilir
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
     * Uygulamayi 30 saniye arka planda tut sonra aktive et
     * "KURALLAR" yazisi kontrol edilir
     * "KURAL EKLE" yazisi kontrol edilir
@@ -191,14 +182,12 @@ Feature: Kurallar
     * "1 Kural" yazisi kontrol edilir
     * "sagliksiz co2" yazisi kontrol edilir
     * "KURAL EKLE" yazisi kontrol edilir
-    * "CO2 miktarı çok iyi seviyeye ulaştuğında" yazisi kontrol edilir
-    #* "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir  (doğru olan bu madde)
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
     * Kural asagi ok tusuna basilir
     * "Uyku modunu aç" yazisi kontrol edilir
     * "Yeniden adlandır" yazisi kontrol edilir
-    * "Sil" yazisi kontrol edilir
 
-  @Kurallar @Deneme
+  @Kurallar
   Scenario: 008 Kurallar Co2 cihazı için pasif ikinci cihaz bazlı kuralın oluşturulduğunun kontrol edilmesi
     * Uygulama resetlenir
     * "KURALLAR" butonuna basilir
@@ -254,666 +243,599 @@ Feature: Kurallar
     * "2 Kural" yazisi kontrol edilir
     * "KURAL EKLE" yazisi kontrol edilir
     * "düsük sicaklik" yazisi kontrol edilir
-    * "CO2 miktarı çok iyi seviyeye ulaştuğında" yazisi kontrol edilir
-  #  * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir   //Doğrusu bu olacak
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
 
-#
-#  @Kurallar
-#  Scenario: 009 Kurallar Co2 için olusturulan ikinci kuralın aktive edilmesinin kontrolu
-#    * Uygulamaya "mobilotomasyon2@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
+  @Kurallar
+  Scenario: 009 Kurallar Co2 için olusturulan ikinci kuralın aktive edilmesinin kontrolu
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "düsük sicaklik" butonu "0" yapilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "2 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "sagliksiz co2" yazisi kontrol edilir
+    * "düsük sicaklik" butonunun "0" oldugu kontrol edilir
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
+    * "sagliksiz co2" yazisi kontrol edilir
+    * "düsük sicaklik" yazisi kontrol edilir
+    * Uygulamayi 30 saniye arka planda tut sonra aktive et
+    * "1 Aktif" yazisi kontrol edilir
+    * "2 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "düsük sicaklik" yazisi kontrol edilir
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
+    * "sagliksiz co2" yazisi kontrol edilir
+    * "düsük sicaklik" yazisi kontrol edilir
+    * "düsük sicaklik" butonunun "0" oldugu kontrol edilir
+    * "sagliksiz co2" butonunun "1" oldugu kontrol edilir
+    * Kural asagi ok tusuna basilir
+    * "Co2" yazisi kontrol edilir
+    * "düsük sicaklik" butonu "1" yapilir
+#    * "Sil" butonuna basilir
+#    * "Kuralı silmek istediğinize emin misiniz?" yazisi kontrol edilir
+#    * Uyari popupi sil butonuna basilir
 #    * 5 saniye bekle
-#    * Kural "2" için aktivasyon butonuna basilir
-#    * "2 AKTİF" yazisi kontrol edilir
-#    * "2 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
-#    * "düsük sicaklik" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" yazisi kontrol edilir
-#    * Uygulamayi 30 saniye arka planda tut sonra aktive et
-#    * 10 saniye bekle
-#    * "2 AKTİF" yazisi kontrol edilir
-#    * "2 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
-#    * "düsük sicaklik" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" yazisi kontrol edilir
-#    * Kural "2" için asagı ok tusuna basilir
-#    * "Gece modu açık" yazisi kontrol edilir
-#    * "Düzenle" yazisi kontrol edilir
-#    * "Sil" yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario: 010 Kurallar Co2 için olusturulan kuralın isminin düzenlenmesi
-#    * Uygulamaya "mobilotomasyon2@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "2 AKTİF" yazisi kontrol edilir
-#    * "2 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
-#    * "düsük sicaklik" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" yazisi kontrol edilir
-#    * Kural "2" için asagı ok tusuna basilir
-#    * "Düzenle" textine basilir
-#    * 5 saniye bekle
-#    * "Yeniden Adlandır" yazisi kontrol edilir
-#    * "düsük sicaklik" yazisi kontrol edilir
-#    * "YENİDEN ADLANDIR" yazisi kontrol edilir
-#    * "İPTAL" yazisi kontrol edilir
-#    * Kural adi "Düşük Sıcaklık" olarak değiştirilir
-#    * "YENİDEN ADLANDIR" butonuna basilir
-#    * 5 saniye bekle
-#    * "2 AKTİF" yazisi kontrol edilir
-#    * "2 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
-#    * "Düşük Sıcaklık" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario: 011 Kurallar Co2 için olusturulan kuralların ana ekrandan erişilebildiğinin kontrol edilmesi
-#    * Uygulamaya "mobilotomasyon2@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * Home ikonuna basilir
-#    * "KURAL SETLERİ" yazisi kontrol edilir
-#    * "Kural Listesi" yazisi kontrol edilir
-#    * "2 AKTİF" yazisi kontrol edilir
-#    * "2 KURAL" yazisi kontrol edilir
-#    * "Kural Listesi" textine basilir
-#    * 5 saniye bekle
-#    * "2 AKTİF" yazisi kontrol edilir
-#    * "2 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
-#    * "Düşük Sıcaklık" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario: 012 Kurallar Co2 için olusturulan kuralların cihaz ekranından erişilebildiğinin kontrol edilmesi
-#    * Uygulamaya "mobilotomasyon2@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 30 saniye bekle
-#    * "Co2" detayina gidilir
-#    * 10 saniye bekle
-#    * "CİHAZA TANIMLI KURALLAR" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
-#    * 5 saniye bekle
-#    * "sagliksiz co2" textine basilir
-#    * 5 saniye bekle
-#    * "2 AKTİF" yazisi kontrol edilir
-#    * "2 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
-#    * "Düşük Sıcaklık" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario: 013 Kurallar Co2 için oluşturulan kuralların tamamen silinmesinin kontrolu
-#    * Uygulamaya "mobilotomasyon2@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "2 AKTİF" yazisi kontrol edilir
-#    * "2 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
-#    * "Düşük Sıcaklık" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" yazisi kontrol edilir
-#    * Kural "2" için asagı ok tusuna basilir
-#    * Kural "2" için sil tusuna basilir
-#    * 5 saniye bekle
-#    * "1 AKTİF" yazisi kontrol edilir
-#    * "1 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "sagliksiz co2" yazisi kontrol edilir
-#    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
-#    * Kural "1" için asagı ok tusuna basilir
-#    * Kural "1" için sil tusuna basilir
-#    * 5 saniye bekle
-#    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
-#    * "Bu bölümden, cihazlarınızın belirlediğiniz konum, zaman ve cihaz bazlı senaryolara göre çalışmasını sağlayabilirsiniz." yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario: 014 Kurallar Co2 cihazı için cihaz bazlı iki sonuçlu kural olusturma kontrolü
-#    * Uygulamaya "mobilotomasyon2@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "KURAL EKLE" textine basilir
-#    * "Cihaz" textine basilir
-#    * "Tetikleyici Cihaz" textine basilir
-#    * 5 saniye bekle
-#    * "Co2" textine basilir
-#    * "Tetikleyici Durum" textine basilir
-#    * 5 saniye bekle
-#    * "CO2 miktarı belli bir seviyeye ulaştığında" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "Tetikleme CO2 Seviye Listesi" textine basilir
-#    * 5 saniye bekle
-#    * "Çok İyi" texti listeden seçilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Cihaz Seçin" textine basilir
-#    * "Co2" textine basilir
-#    * "Cihaz Sonucunu Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Uyku modunu aç" texti listeden seçilir
-#    * "KAYDET" butonuna basilir
-#    * "Kuralınızın sonucunu belirleyin." yazisi kontrol edilir
-#    * "Sonuç 1: Co2" yazisi kontrol edilir
-#    * "Sonuç Ekle" yazisi kontrol edilir
-#    * "Sonuç Ekle" textine basilir
-#    * "Sonuç 2" yazisi kontrol edilir
-#    * "Cihaz Seçin" textine basilir
-#    * "Co2" textine basilir
-#    * "Cihaz Sonucunu Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Uyku modunu kapat" texti listeden seçilir
-#    * "KAYDET" butonuna basilir
-#    * "Kuralınızın sonucunu belirleyin." yazisi kontrol edilir
-#    * "Sonuç 1: Co2" yazisi kontrol edilir
-#    * "Sonuç 2: Co2" yazisi kontrol edilir
-#    * "Sonuç Ekle" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
+#    * Kural asagi ok tusuna basilir
+#    * "Co2" yazisi kontrol edilir
+#    * "Sil" butonuna basilir
+#    * "Kuralı silmek istediğinize emin misiniz?" yazisi kontrol edilir
+#    * Uyari popupi sil butonuna basilir
+#    * "Kural bulunamadı" yazisi icerdigi kontrol edilir
+
+  @Kurallar
+  Scenario: 010 Kurallar Co2 için olusturulan kuralın isminin düzenlenmesi
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "2 Aktif" yazisi kontrol edilir
+    * "2 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "sagliksiz co2" yazisi kontrol edilir
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
+    * "düsük sicaklik" yazisi kontrol edilir
+    * Kural asagi ok tusuna basilir
+    * "Yeniden adlandır" yazisi kontrol edilir
+    * "sagliksiz co2" yazisi kontrol edilir
+    * "Yeniden adlandır" butonuna basilir
+    * Appbar "Yeniden adlandır" texti kontrol edilir
+    * "İPTAL" yazisi kontrol edilir
+    * Kural adi "Düşük Sıcaklık" olarak değiştirilir
+    * 3 saniye bekle
+    * "KAYDET" butonuna basilir
+    * "Başarılı" yazisi kontrol edilir
+    * "Kural ismi başarı ile değiştildi." yazisi kontrol edilir
+    * "TAMAM" butonuna basilir
+    * "2 Aktif" yazisi kontrol edilir
+    * "2 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "düsük sicaklik" yazisi kontrol edilir
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
+    * "Düşük Sıcaklık" yazisi kontrol edilir
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
+
+  @Kurallar
+  Scenario: 011 Kurallar Co2 için olusturulan kuralların ana ekrandan erişilebildiğinin kontrol edilmesi
+    * Uygulama resetlenir
+    * "Home" butonuna basilir
+    * "KURAL SETLERİ" yazisi kontrol edilir
+    * "Kural Listesi" yazisi kontrol edilir
+    * "2 Aktif / 2 Kural" yazisi kontrol edilir
+    * "Kural Listesi" textine basilir
+    * "2 Aktif" yazisi kontrol edilir
+    * "2 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "Düşük Sıcaklık" yazisi kontrol edilir
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
+    * "sagliksiz co2" yazisi kontrol edilir
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
+
+  @Kurallar
+  Scenario: 012 Kurallar Co2 için olusturulan kuralların cihaz ekranından erişilebildiğinin kontrol edilmesi
+    * Uygulama resetlenir
+    * "Co2" detayina gidilir
+    * "CİHAZA TANIMLI KURALLAR" yazisi kontrol edilir
+    * "sagliksiz co2" yazisi kontrol edilir
+    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
+    * Ekrani "down" kaydir
+    * "Düşük Sıcaklık" textine basilir
+    * 5 saniye bekle
+    * "2 Aktif" yazisi kontrol edilir
+    * "2 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "sagliksiz co2" yazisi kontrol edilir
+    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
+    * "sağlıksız co2" yazisi kontrol edilir
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
+
+  @Kurallar
+  Scenario: 013 Kurallar Co2 için oluşturulan kuralların tamamen silinmesinin kontrolu
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * 5 saniye bekle
+    * "2 Aktif" yazisi kontrol edilir
+    * "2 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "sagliksiz co2" yazisi kontrol edilir
+    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
+    * "Düşük Sıcaklık" yazisi kontrol edilir
+    * "CO2 miktarı sağlıksız seviyeye ulaştığında" yazisi kontrol edilir
+    * Kural asagi ok tusuna basilir
+    * "Sil" butonuna basilir
+    * "Kuralı silmek istediğinize emin misiniz?" yazisi kontrol edilir
+    * Uyari popupi sil butonuna basilir
+    * 5 saniye bekle
+    * Kural asagi ok tusuna basilir
+    * "Co2" yazisi kontrol edilir
+    * "Sil" butonuna basilir
+    * "Kuralı silmek istediğinize emin misiniz?" yazisi kontrol edilir
+    * Uyari popupi sil butonuna basilir
+    * "Kural bulunamadı" yazisi icerdigi kontrol edilir
+
+  @Kurallar
+  Scenario: 014 Kurallar Co2 cihazı için cihaz bazlı iki sonuçlu kural olusturma kontrolü
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * 5 saniye bekle
+    * "KURAL EKLE" textine basilir
+    * "Cihaz Bazlı" textine basilir
+    * Kurallar "Tetikleyici Cihaz" butonuna basilir
+    * "Seç" textine basilir
+    * Kurallar "Tetikleyici Durum" butonuna basilir
+    * "CO2 miktarı belli bir seviyeye ulaştığında" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Tetikleme Sıcaklık Listesi" butonuna basilir
+    * "Çok İyi" set edilir
+    * "Seç" textine basilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * Kurallar "Cihaz Seçin" butonuna basilir
+    * "Co2" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Uyku modunu aç" set edilir
+    * "Seç" textine basilir
+    * "KAYDET" butonuna basilir
+    * "Kuralınızın sonucunu belirleyin" yazisi kontrol edilir
+    * "Sonuç 1: Co2" yazisi kontrol edilir
+    * "SONUÇ EKLE" yazisi kontrol edilir
+    * "SONUÇ EKLE" butonuna basilir
+    * "Sonuç 2" yazisi kontrol edilir
+    * Kurallar "Cihaz Seçin" butonuna basilir
+    * "Co2" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Uyku modunu kapat" set edilir
+    * "Seç" textine basilir
+    * "KAYDET" butonuna basilir
+    * "Kuralınızın sonucunu belirleyin" yazisi kontrol edilir
+    * "Sonuç 1: Co2" yazisi kontrol edilir
+    * "Sonuç 2: Co2" yazisi kontrol edilir
+    * "SONUÇ EKLE" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kayıt" textine basilir
+    * "Kuralınıza isim verin" yazisi kontrol edilir
+    * "OLUŞTURDUĞUNUZ KURALA BİR İSİM VERİN" yazisi kontrol edilir
+    * "Kuralı şimdi aktif hale getir" yazisi kontrol edilir
+    * Kural adi "İki sonuçlu kural" girilir
+    * "Done" butonuna basilir
+    * "KAYDET" butonuna basilir
+    * "Kural ekleme başarıyla tamamlandı!" yazisi kontrol edilir
+    * "TAMAM" butonuna basilir
+    * "KURALLAR" yazisi kontrol edilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "1 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "İki sonuçlu kural" yazisi kontrol edilir
+    * "CO2 miktarı çok iyi seviyeye ulaştığında" yazisi kontrol edilir
+    * Kural asagi ok tusuna basilir
+    * "Uyku modunu aç" yazisi kontrol edilir
+    * "Uyku modunu kapat" yazisi kontrol edilir
+    * "Sil" butonuna basilir
+    * "Kuralı silmek istediğinize emin misiniz?" yazisi kontrol edilir
+    * Uyari popupi sil butonuna basilir
+    * "Kural bulunamadı" yazisi icerdigi kontrol edilir
+
+  @Kurallar
+  Scenario:015 Kurallar Gateway Cihazı için tetikleyici durumların kontrolü
+    * Uygulama resetlenir
+    * Logout yapilir
+    * Uygulamaya "mobilotomasyon3@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "KURAL EKLE" textine basilir
+    * "Cihaz Bazlı" textine basilir
+    * "Sonuç" yazisi kontrol edilir
+    * Kurallar "Tetikleyici Cihaz" butonuna basilir
+    * "Gateway" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Tetikleyici Durum" butonuna basilir
+    * "Sıcaklık belirli bir dereceyi geçtiğinde" set edilir
+    * "Sıcaklık belirli bir derecenin altına düştüğünde" set edilir
+    * "Bağıl nem belli bir yüzdeyi geçtiğinde" set edilir
+    * "Bağıl nem belli bir yüzdenin altına düştüğünde" set edilir
+    * "Sıcaklık belirli bir dereceyi geçtiğinde" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Tetikleme Sıcaklık Listesi" butonuna basilir
+    * "0 °C" set edilir
+    * "1 °C" set edilir
+    * "2 °C" set edilir
+    * "3 °C" set edilir
+    * "2 °C" set edilir
+    * "Seç" textine basilir
+    * "2 °C" yazisi kontrol edilir
+    * Kurallar "Sıcaklık belirli bir dereceyi geçtiğinde" butonuna basilir
+    * "Sıcaklık belirli bir derecenin altına düştüğünde" set edilir
+    * "Seç" textine basilir
+    * "Tetikleme Sıcaklık Listesi" yazisi kontrol edilir
+    * Kurallar "Tetikleme Sıcaklık Listesi" butonuna basilir
+    * "0 °C" set edilir
+    * "1 °C" set edilir
+    * "2 °C" set edilir
+    * "3 °C" set edilir
+    * "4 °C" set edilir
+    * "Seç" textine basilir
+    * "4 °C" yazisi kontrol edilir
+    * Kurallar "Sıcaklık belirli bir derecenin altına düştüğünde" butonuna basilir
+    * "Bağıl nem belli bir yüzdeyi geçtiğinde" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Tetikleme Sıcaklık Listesi" butonuna basilir
+#    * Kurallar "Tetikleme Nem Listesi" butonuna basilir  // Doğrusu bu olacak
+#    * "Tetikleme Nem Listesi" yazisi kontrol edilir  // Doğrusu bu olacak
+    * "Tetikleme Sıcaklık Listesi" yazisi kontrol edilir
+    * Kurallar "Tetikleme Sıcaklık Listesi" butonuna basilir
+    * "10" set edilir
+    * "15" set edilir
+    * "20" set edilir
+    * "25" set edilir
+    * "30" set edilir
+    * "Seç" textine basilir
+    * "30" yazisi kontrol edilir
+    * Kurallar "Bağıl nem belli bir yüzdeyi geçtiğinde" butonuna basilir
+    * "Bağıl nem belli bir yüzdenin altına düştüğünde" set edilir
+    * "Seç" textine basilir
+#    * Kurallar "Tetikleme Nem Listesi" butonuna basilir  // Doğrusu bu olacak
+#    * "Tetikleme Nem Listesi" yazisi kontrol edilir  // Doğrusu bu olacak
+    * "Tetikleme Sıcaklık Listesi" yazisi kontrol edilir
+    * Kurallar "Tetikleme Sıcaklık Listesi" butonuna basilir
+    * "10" set edilir
+    * "15" set edilir
+    * "20" set edilir
+    * "25" set edilir
+    * "10" set edilir
+    * "Seç" textine basilir
+    * "10" yazisi kontrol edilir
+    * "SONRAKİ ADIM" yazisi kontrol edilir
+
+  @Kurallar
+  Scenario: 016 Kurallar Gateway sıcaklık tetiklemesi ile lamba aç kuralının oluşturulması
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "KURAL EKLE" textine basilir
+    * "Cihaz Bazlı" textine basilir
+    * Kurallar "Tetikleyici Cihaz" butonuna basilir
+    * "Gateway" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Tetikleyici Durum" butonuna basilir
+    * "Sıcaklık belirli bir derecenin altına düştüğünde" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Tetikleme Sıcaklık Listesi" butonuna basilir
+    * "3 °C" set edilir
+    * "Seç" textine basilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * Kurallar "Cihaz Seçin" butonuna basilir
+    * "Lamba" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Aç" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Aç" butonuna basilir
+    * "Kapat" set edilir
+    * "Aç" set edilir
+    * "Seç" textine basilir
+    * "KAYDET" yazisi kontrol edilir
+    * "KAYDET" butonuna basilir
+    * "Sonuç 1: Lamba" yazisi kontrol edilir
+    * "SONUÇ EKLE" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
 #    * "Kayıt" textine basilir
-#    * "Kuralınıza isim verin" yazisi kontrol edilir
-#    * "Kural İsmi" yazisi kontrol edilir
-#    * "Kuralı şimdi etkinleştirin" yazisi kontrol edilir
-#    * Kural adi "İki sonuçlu kural" girilir
-#    * "KAYDET" butonuna basilir
-#    * 5 saniye bekle
-#    * "İki sonuçlu kural kuralı oluşturuldu!" yazisi kontrol edilir
-#    * "TAMAM" butonuna basilir
-#    * 5 saniye bekle
-#    * "Kurallar" yazisi kontrol edilir
-#    * "1 AKTİF" yazisi kontrol edilir
-#    * "1 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "İki sonuçlu kural" yazisi kontrol edilir
-#    * "CO2 miktarı çok iyi seviyeye ulaştuğında" yazisi kontrol edilir
-#    * Kural "1" için asagı ok tusuna basilir
-#    * "Gece modu açık" yazisi kontrol edilir
-#    * "Gece modu kapalı" yazisi kontrol edilir
-#    * Kural "1" için sil tusuna basilir
-#    * 5 saniye bekle
-#    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
-#    * "Bu bölümden, cihazlarınızın belirlediğiniz konum, zaman ve cihaz bazlı senaryolara göre çalışmasını sağlayabilirsiniz." yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario:015 Kurallar Gateway Cihazı için tetikleyici durumların kontrolü
-#    * Uygulamaya "mobilotomasyon3@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "KURAL EKLE" textine basilir
-#    * "Cihaz" textine basilir
-#    * "Sonuç" yazisi kontrol edilir
-#    * "Tetikleyici Cihaz" textine basilir
-#    * 5 saniye bekle
-#    * "Gateway" textine basilir
-#    * 5 saniye bekle
-#    * "Tetikleyici Durum" yazisi kontrol edilir
-#    * "Tetikleyici Durum" textine basilir
-#    * 5 saniye bekle
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir derecenin altına düştüğünde" yazisi kontrol edilir
-#    * "Bağıl nem belli bir yüzdeyi geçtiğinde" yazisi kontrol edilir
-#    * "Bağıl nem belli bir yüzdenin altına düştüğünde" yazisi kontrol edilir
-#    * 5 saniye bekle
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "Tetikleme Sıcaklık Listesi" yazisi kontrol edilir
-#    * "Tetikleme Sıcaklık Listesi" textine basilir
-#    * 5 saniye bekle
-#    * "0 C°" yazisi kontrol edilir
-#    * "1 C°" yazisi kontrol edilir
-#    * "2 C°" yazisi kontrol edilir
-#    * "3 C°" yazisi kontrol edilir
-#    * "2 C°" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "2 C°" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir dereceyi geçtiğinde" textine basilir
-#    * 5 saniye bekle
-#    * "Sıcaklık belirli bir derecenin altına düştüğünde" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "Tetikleme Sıcaklık Listesi" yazisi kontrol edilir
-#    * "Tetikleme Sıcaklık Listesi" textine basilir
-#    * 5 saniye bekle
-#    * "0 C°" yazisi kontrol edilir
-#    * "1 C°" yazisi kontrol edilir
-#    * "2 C°" yazisi kontrol edilir
-#    * "3 C°" yazisi kontrol edilir
-#    * "4 C°" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "4 C°" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir derecenin altına düştüğünde" textine basilir
-#    * 5 saniye bekle
-#    * "Bağıl nem belli bir yüzdeyi geçtiğinde" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "Tetikleme Nem Listesi" yazisi kontrol edilir
-#    * "Tetikleme Nem Listesi" textine basilir
-#    * 5 saniye bekle
-#    * "10 %" yazisi kontrol edilir
-#    * "15 %" yazisi kontrol edilir
-#    * "20 %" yazisi kontrol edilir
-#    * "25 %" yazisi kontrol edilir
-#    * "30 %" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "30 %" yazisi kontrol edilir
-#    * "Bağıl nem belli bir yüzdeyi geçtiğinde" textine basilir
-#    * 5 saniye bekle
-#    * "Bağıl nem belli bir yüzdenin altına düştüğünde" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "Tetikleme Nem Listesi" yazisi kontrol edilir
-#    * "Tetikleme Nem Listesi" textine basilir
-#    * 5 saniye bekle
-#    * "10 %" yazisi kontrol edilir
-#    * "15 %" yazisi kontrol edilir
-#    * "20 %" yazisi kontrol edilir
-#    * "25 %" yazisi kontrol edilir
-#    * "10 %" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "10 %" yazisi kontrol edilir
-#    * "SONRAKİ" yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario: 016 Kurallar Gateway sıcaklık tetiklemesi ile lamba aç kuralının oluşturulması
-#    * Uygulamaya "mobilotomasyon3@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "KURAL EKLE" textine basilir
-#    * "Cihaz" textine basilir
-#    * "Tetikleyici Cihaz" textine basilir
-#    * 5 saniye bekle
-#    * "Gateway" textine basilir
-#    * 5 saniye bekle
-#    * "Tetikleyici Durum" textine basilir
-#    * 5 saniye bekle
-#    * "Sıcaklık belirli bir derecenin altına düştüğünde" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "Tetikleme Sıcaklık Listesi" textine basilir
-#    * 5 saniye bekle
-#    * "3 C°" texti listeden seçilir
-#    * "SONRAKİ" butonuna basilir
-#    * 5 saniye bekle
-#    * "Cihaz Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Lamba" textine basilir
-#    * "Cihaz Sonucunu Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Açık" yazisi kontrol edilir
-#    * "Kapalı" yazisi kontrol edilir
-#    * "Açık" texti listeden seçilir
-#    * "KAYDET" yazisi kontrol edilir
-#    * "KAYDET" butonuna basilir
-#    * "Sonuç 1: Lamba" yazisi kontrol edilir
-#    * "Sonuç Ekle" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kayıt" textine basilir
-#    * "Kuralınıza isim verin" yazisi kontrol edilir
-#    * "Kural İsmi" yazisi kontrol edilir
-#    * "Kuralı şimdi etkinleştirin" yazisi kontrol edilir
-#    * Kural adi "Sıcaklık düşünce lamba aç" girilir
-#    * "KAYDET" butonuna basilir
-#    * 5 saniye bekle
-#    * "Sıcaklık düşünce lamba aç kuralı oluşturuldu!" yazisi kontrol edilir
-#    * "TAMAM" butonuna basilir
-#    * 5 saniye bekle
-#    * "Kurallar" yazisi kontrol edilir
-#    * "1 AKTİF" yazisi kontrol edilir
-#    * "1 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "Sıcaklık düşünce lamba aç" yazisi kontrol edilir
-#    * "Gateway" yazisi kontrol edilir
-#    * "Sıcaklık belirli bir derecenin altına düştüğünde" yazisi kontrol edilir
-#    * Kural "1" için asagı ok tusuna basilir
-#    * "Lamba" yazisi kontrol edilir
-#    * "Açık" yazisi kontrol edilir
-#    * Kural "1" için sil tusuna basilir
-#    * 5 saniye bekle
-#    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
-#    * "Bu bölümden, cihazlarınızın belirlediğiniz konum, zaman ve cihaz bazlı senaryolara göre çalışmasını sağlayabilirsiniz." yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario: 017 Kurallar Gateway nem tetiklemesi ile smartplug aç kuralının oluşturulması
-#    * Uygulamaya "mobilotomasyon3@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "KURAL EKLE" textine basilir
-#    * "Cihaz" textine basilir
-#    * "Tetikleyici Cihaz" textine basilir
-#    * 5 saniye bekle
-#    * "Gateway" textine basilir
-#    * 5 saniye bekle
-#    * "Tetikleyici Durum" textine basilir
-#    * 5 saniye bekle
-#    * "Bağıl nem belli bir yüzdeyi geçtiğinde" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "Tetikleme Nem Listesi" textine basilir
-#    * 5 saniye bekle
-#    * "30 %" texti listeden seçilir
-#    * "SONRAKİ" butonuna basilir
-#    * 5 saniye bekle
-#    * "Cihaz Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Priz" textine basilir
-#    * "Cihaz Sonucunu Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Açık" yazisi kontrol edilir
-#    * "Kapalı" yazisi kontrol edilir
-#    * "Kapalı" texti listeden seçilir
-#    * "KAYDET" yazisi kontrol edilir
-#    * "KAYDET" butonuna basilir
-#    * "Sonuç 1: Priz" yazisi kontrol edilir
-#    * "Sonuç Ekle" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kayıt" textine basilir
-#    * "Kuralınıza isim verin" yazisi kontrol edilir
-#    * "Kural İsmi" yazisi kontrol edilir
-#    * "Kuralı şimdi etkinleştirin" yazisi kontrol edilir
-#    * Kural adi "Nem artıca priz kapa" girilir
-#    * "KAYDET" butonuna basilir
-#    * 5 saniye bekle
-#    * "Nem artıca priz kapa kuralı oluşturuldu!" yazisi kontrol edilir
-#    * "TAMAM" butonuna basilir
-#    * 5 saniye bekle
-#    * "Kurallar" yazisi kontrol edilir
-#    * "1 AKTİF" yazisi kontrol edilir
-#    * "1 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "Nem artıca priz kapa" yazisi kontrol edilir
-#    * "Gateway" yazisi kontrol edilir
-#    * "Bağıl nem belli bir yüzdeyi geçtiğinde" yazisi kontrol edilir
-#    * Kural "1" için asagı ok tusuna basilir
-#    * "Priz" yazisi kontrol edilir
-#    * "Kapalı" yazisi kontrol edilir
-#    * Kural "1" için sil tusuna basilir
-#    * 5 saniye bekle
-#    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
-#    * "Bu bölümden, cihazlarınızın belirlediğiniz konum, zaman ve cihaz bazlı senaryolara göre çalışmasını sağlayabilirsiniz." yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario: 018 Kurallar Gateway cihaz ekranından başlatılarak cihaz bazlı kural oluşturulması
-#    * Uygulamaya "mobilotomasyon3@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 30 saniye bekle
-#    * "Gateway" detayina gidilir
-#    * 10 saniye bekle
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * 5 saniye bekle
-#    * "KURAL EKLE" butonuna basilir
-#    * 5 saniye bekle
-#    * "Cihaz" textine basilir
-#    * "Tetikleyici Cihaz" textine basilir
-#    * 5 saniye bekle
-#    * "Gateway" textine basilir
-#    * 5 saniye bekle
-#    * "Tetikleyici Durum" textine basilir
-#    * 5 saniye bekle
-#    * "Bağıl nem belli bir yüzdenin altına düştüğünde" texti listeden seçilir
-#    * 5 saniye bekle
-#    * "Tetikleme Nem Listesi" textine basilir
-#    * 5 saniye bekle
-#    * "10 %" texti listeden seçilir
-#    * "SONRAKİ" butonuna basilir
-#    * 5 saniye bekle
-#    * "Cihaz Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Priz" textine basilir
-#    * "Cihaz Sonucunu Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Açık" texti listeden seçilir
-#    * "KAYDET" butonuna basilir
-#    * "Sonuç 1: Priz" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kuralı şimdi etkinleştirin" yazisi kontrol edilir
-#    * Kural adi "Nem düşünce priz aç" girilir
-#    * "KAYDET" butonuna basilir
-#    * 5 saniye bekle
-#    * "Nem düşünce priz aç kuralı oluşturuldu!" yazisi kontrol edilir
-#    * "TAMAM" butonuna basilir
-#    * 5 saniye bekle
-#    * "Gateway" yazisi kontrol edilir
-#    * "Oturma Odası" yazisi kontrol edilir
-#    * "CİHAZ YÖNETİMİ" yazisi kontrol edilir
-#    * "CİHAZ GEÇMİŞİ" yazisi kontrol edilir
-#    * "CİHAZA TANIMLI KURALLAR" yazisi kontrol edilir
-#    #* "Bağıl nem belli bir yüzdenin altına düştüğ..." yazisi kontrol edilir
-#    * "Nem düşünce priz aç" yazisi kontrol edilir
-#    * "Nem düşünce priz aç" textine basilir
-#    * 5 saniye bekle
-#    * "1 AKTİF" yazisi kontrol edilir
-#    * "1 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "Nem düşünce priz aç" yazisi kontrol edilir
-#    #* "Bağıl nem belli bir yüzdenin altına düştüğ..." yazisi kontrol edilir
-#    * "Priz" yazisi kontrol edilir
-#    * "Açık" yazisi kontrol edilir
-#    * "Sil" textine basilir
-#    * 5 saniye bekle
-#    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
-#    * "Bu bölümden, cihazlarınızın belirlediğiniz konum, zaman ve cihaz bazlı senaryolara göre çalışmasını sağlayabilirsiniz." yazisi kontrol edilir
-#
-#    @Kurallar
-#    Scenario: XXX Kurallar cihaz bazlı kural için tetikleyici cihaz yok uyarısı
-#      * Uygulamaya "yazilimtestonay@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#      * 20 saniye bekle
-#      * "KURALLAR" butonuna basilir
-#      * 5 saniye bekle
-#      * "KURAL EKLE" textine basilir
-#      * 5 saniye bekle
-#      * "Cihaz" textine basilir
-#      * 5 saniye bekle
-#      * "Bir kural için tetiklenebilecek bir uygulamanız yok." yazisi kontrol edilir
-#      * "TAMAM" butonuna basilir
-#      * 5 saniye bekle
-#      * "Oluşturacağınız kuralın çeşidini belirleyiniz." yazisi kontrol edilir
-#      * "Belirlediğiniz senaryoya göre cihazlara yönelik aksiyon alabiliriz." yazisi kontrol edilir
-#      * "Konuma Bağlı" yazisi kontrol edilir
-#      * "Cihaz" yazisi kontrol edilir
-#      * "Zamanlama" yazisi kontrol edilir
-#
-#    @Kurallar
-#    Scenario: 019 Kurallar zamanlama kuralı oluşturma ilk ekranının kontrolü
-#    * Uygulamaya "mobilotomasyon3@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "KURAL EKLE" textine basilir
-#    * "Zamanlama" textine basilir
-#    * "Gelişmiş Kural Oluştur" yazisi kontrol edilir
-#    * "BAŞLAT" yazisi kontrol edilir
-#    * "Sonuç" yazisi kontrol edilir
-#    * "Kayıt" yazisi kontrol edilir
-#    * "01" yazisi kontrol edilir
-#    * "02" yazisi kontrol edilir
-#    * "03" yazisi kontrol edilir
-#    * "Kuralınızın ne zaman başlamasını istediğinizi seçin" yazisi kontrol edilir
-#    * "BAŞLANGIÇ SAATİ" yazisi kontrol edilir
-#    * "GÜN SEÇİMİ" yazisi kontrol edilir
-#    * "SONRAKİ" yazisi kontrol edilir
-#
-#
-#  @Kurallar
-#  Scenario: 020 Kurallar zamanlama kuralı oluşturma ilk adımda iptal edilmenin kontrol edilmesi
-#    * Uygulamaya "mobilotomasyon3@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "KURAL EKLE" textine basilir
-#    * "Zamanlama" textine basilir
-#    * Kural başlangıç saati 3 saat ileri set edilir
-#    * 5 saniye bekle
-#    * Kural başlangıç saati 5 dakika ileri set edilir
-#    * 5 saniye bekle
-#    * Kural gününü "Fri" olarak ayarlanır
-#    * 5 saniye bekle
-#    * Kural gününü "Mon" olarak ayarlanır
-#    * 5 saniye bekle
-#    * Kural gününü "Sat" olarak ayarlanır
-#    * 5 saniye bekle
-#    * "SONRAKİ" yazisi kontrol edilir
-#    * navigasyondan geri tusuna basilir
+    * "Kuralınıza isim verin" yazisi kontrol edilir
+    * "OLUŞTURDUĞUNUZ KURALA BİR İSİM VERİN" yazisi kontrol edilir
+    * "Kuralı şimdi aktif hale getir" yazisi kontrol edilir
+    * Kural adi "Sıcaklık düşünce lamba aç" girilir
+    * "Done" butonuna basilir
+    * "KAYDET" butonuna basilir
+    * "Kural ekleme başarıyla tamamlandı!" yazisi kontrol edilir
+    * "TAMAM" butonuna basilir
+    * "KURALLAR" yazisi kontrol edilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "1 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "Sıcaklık düşünce lamba aç" yazisi kontrol edilir
+    * "Gateway" yazisi kontrol edilir
+    * "Sıcaklık belirli bir derecenin altına düştüğünde" yazisi kontrol edilir
+    * Kural asagi ok tusuna basilir
+    * "Gateway" yazisi kontrol edilir
+    * "Lamba" yazisi kontrol edilir
+    * "Sil" butonuna basilir
+    * "Kuralı silmek istediğinize emin misiniz?" yazisi kontrol edilir
+    * Uyari popupi sil butonuna basilir
+    * "Kural bulunamadı" yazisi icerdigi kontrol edilir
+
+  @Kurallar
+  Scenario: 017 Kurallar Gateway nem tetiklemesi ile smartplug aç kuralının oluşturulması
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "KURAL EKLE" textine basilir
+    * "Cihaz Bazlı" textine basilir
+    * Kurallar "Tetikleyici Cihaz" butonuna basilir
+    * "Gateway" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Tetikleyici Durum" butonuna basilir
+    * "Bağıl nem belli bir yüzdeyi geçtiğinde" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Tetikleme Sıcaklık Listesi" butonuna basilir
+#    * Kurallar "Tetikleme Nem Listesi" butonuna basilir // Doğrusu bu olacak
+    * "30" set edilir
+    * "Seç" textine basilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * Kurallar "Cihaz Seçin" butonuna basilir
+    * "Priz" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Aç" set edilir
+    * "Kapat" set edilir
+    * "Seç" textine basilir
+    * "KAYDET" yazisi kontrol edilir
+    * "KAYDET" butonuna basilir
+    * "Sonuç 1: Priz" yazisi kontrol edilir
+    * "SONUÇ EKLE" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kayıt" textine basilir
+    * "Kuralınıza isim verin" yazisi kontrol edilir
+    * "OLUŞTURDUĞUNUZ KURALA BİR İSİM VERİN" yazisi kontrol edilir
+    * "Kuralı şimdi aktif hale getir" yazisi kontrol edilir
+    * Kural adi "Nem artıca priz kapa" girilir
+    * "Done" butonuna basilir
+    * "KAYDET" butonuna basilir
+    * "Kural ekleme başarıyla tamamlandı!" yazisi kontrol edilir
+    * "TAMAM" butonuna basilir
+    * "KURALLAR" yazisi kontrol edilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "1 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "Nem artıca priz kapa" yazisi kontrol edilir
+    * "Gateway" yazisi kontrol edilir
+    * "Bağıl nem belli bir yüzdeyi geçtiğinde" yazisi kontrol edilir
+    * Kural asagi ok tusuna basilir
+    * "Gateway" yazisi kontrol edilir
+    * "Priz" yazisi kontrol edilir
+    * "Sil" butonuna basilir
+    * "Kuralı silmek istediğinize emin misiniz?" yazisi kontrol edilir
+    * Uyari popupi sil butonuna basilir
+    * "Kural bulunamadı" yazisi icerdigi kontrol edilir
+
+  @Kurallar
+  Scenario: 018 Kurallar Gateway cihaz ekranından başlatılarak cihaz bazlı kural oluşturulması
+    * Uygulama resetlenir
+    * "Gateway" detayina gidilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "KURAL EKLE" butonuna basilir
+    * "Cihaz Bazlı" textine basilir
+    * Kurallar "Tetikleyici Cihaz" butonuna basilir
+    * "Gateway" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Tetikleyici Durum" butonuna basilir
+    * "Bağıl nem belli bir yüzdenin altına düştüğünde" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Tetikleme Sıcaklık Listesi" butonuna basilir
+#    * Kurallar "Tetikleme Nem Listesi" butonuna basilir // Doğrusu bu olacak
+    * "10" set edilir
+    * "Seç" textine basilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * Kurallar "Cihaz Seçin" butonuna basilir
+    * "Priz" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Aç" set edilir
+    * "Seç" textine basilir
+    * "KAYDET" butonuna basilir
+    * "Sonuç 1: Priz" yazisi kontrol edilir
+    * "SONRAKİ adım" butonuna basilir
+    * "Kuralı şimdi aktif hale getir" yazisi kontrol edilir
+    * Kural adi "Nem düşünce priz aç" girilir
+    * "Done" butonuna basilir
+    * "KAYDET" butonuna basilir
+    * "Kural ekleme başarıyla tamamlandı!" yazisi kontrol edilir
+    * "TAMAM" butonuna basilir
+    * "Gateway" yazisi kontrol edilir
+    * "Oturma Odası" yazisi kontrol edilir
+    * "CİHAZ YÖNETİMİ" yazisi kontrol edilir
+    * "CİHAZ GEÇMİŞİ" yazisi kontrol edilir
+    * "CİHAZA TANIMLI KURALLAR" yazisi kontrol edilir
+    #* "Bağıl nem belli bir yüzdenin altına düştüğ..." yazisi kontrol edilir
+    * "Nem düşünce priz aç" yazisi kontrol edilir
+    * "Nem düşünce priz aç" textine basilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "1 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "Nem düşünce priz aç" yazisi kontrol edilir
+    #* "Bağıl nem belli bir yüzdenin altına düştüğ..." yazisi kontrol edilir
+    * "Priz" yazisi kontrol edilir
+    * "Açık" yazisi kontrol edilir
+    * "Sil" textine basilir
+    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
+    * "Bu bölümden, cihazlarınızın belirlediğiniz konum, zaman ve cihaz bazlı senaryolara göre çalışmasını sağlayabilirsiniz." yazisi kontrol edilir
+
+  @Kurallar
+  Scenario: XXX Kurallar cihaz bazlı kural için tetikleyici cihaz yok uyarısı
+    * Uygulama resetlenir
+    * Logout yapilir
+    * Uygulamaya "yazilimtestonay@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "KURAL EKLE" textine basilir
+    * "Cihaz Bazlı" textine basilir
+    * Kurallar "Tetikleyici Cihaz" butonuna basilir
+    * "Tetikleyici cihaz bulunamadı" yazisi kontrol edilir
+    * "TAMAM" butonuna basilir
+    * navigasyondan geri tusuna basilir
+    * "Oluşturacağınız kuralın çeşidini belirleyin." yazisi kontrol edilir
+    * "Konum Bazlı" yazisi kontrol edilir
+    * "Cihaz Bazlı" yazisi kontrol edilir
+    * "Zaman Bazlı" yazisi kontrol edilir
+
+    @Kurallar
+    Scenario: 019 Kurallar zamanlama kuralı oluşturma ilk ekranının kontrolü
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "KURAL EKLE" textine basilir
+    * "Zaman Bazlı" textine basilir
+    * "Gelişmiş Kural Oluştur" yazisi kontrol edilir
+    * "Başlangıç" yazisi kontrol edilir
+    * "Sonuç" yazisi kontrol edilir
+    * "Kayıt" yazisi kontrol edilir
+    * "01" yazisi kontrol edilir
+    * "02" yazisi kontrol edilir
+    * "03" yazisi kontrol edilir
+    * "Kuralınızın başlamasını istediğiniz zamanı seçin" yazisi kontrol edilir
+    * "BAŞLANGIÇ SAATİ" yazisi kontrol edilir
+    * "GÜN SEÇİMİ" yazisi kontrol edilir
+    * "SONRAKİ ADIM" yazisi kontrol edilir
+
+  @Kurallar
+  Scenario: 020 Kurallar zamanlama kuralı oluşturma ilk adımda iptal edilmenin kontrol edilmesi
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "KURAL EKLE" textine basilir
+    * "Zaman Bazlı" textine basilir
+    * Kural başlangıç saati 3 saat ileri set edilir
+    * Kural başlangıç saati 5 dakika ileri set edilir
+    * Kural gününü "Fri" olarak ayarlanır
+    * Kural gününü "Mon" olarak ayarlanır
+    * Kural gününü "Sat" olarak ayarlanır
+    * "SONRAKİ ADIM" yazisi kontrol edilir
+    * navigasyondan geri tusuna basilir
 #    * "İptal etmek istiyor musunuz?" yazisi kontrol edilir
 #    * "HAYIR" yazisi kontrol edilir
 #    * "EVET" yazisi kontrol edilir
 #    * "EVET" butonuna basilir
-#    * Appbar "Kural Ekle" texti kontrol edilir
-#    * "Oluşturacağınız kuralın çeşidini belirleyiniz." yazisi kontrol edilir
-#    * "Belirlediğiniz senaryoya göre cihazlara yönelik aksiyon alabiliriz." yazisi kontrol edilir
-#    * "Konuma Bağlı" yazisi kontrol edilir
-#    * "Cihaz" yazisi kontrol edilir
-#    * "Zamanlama" yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario: 021 Kurallar zamanlama kuralı ikinci adımda iptal edilmesinin kontrol edilmesi
-#    * Uygulamaya "mobilotomasyon3@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "KURAL EKLE" textine basilir
-#    * "Zamanlama" textine basilir
-#    * Kural başlangıç saati 1 saat ileri set edilir
-#    * 5 saniye bekle
-#    * Kural başlangıç saati 1 dakika ileri set edilir
-#    * 5 saniye bekle
-#    * Kural gününü "Thu" olarak ayarlanır
-#    * 5 saniye bekle
-#    * "SONRAKİ" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kuralınızın sonucunu belirleyin." yazisi kontrol edilir
-#    * "Sonuç 1" yazisi kontrol edilir
-#    * "Cihaz Seçin" yazisi kontrol edilir
-#    * "Cihaz Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Lamba" textine basilir
-#    * "Cihaz Sonucunu Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Açık" texti listeden seçilir
-#    * "KAYDET" butonuna basilir
-#    * "Sonuç 1: Lamba" yazisi kontrol edilir
-#    * "Sonuç Ekle" yazisi kontrol edilir
-#    * navigasyondan geri tusuna basilir
-#    * 5 saniye bekle
+    * Appbar "Kural Ekle" texti kontrol edilir
+    * "Oluşturacağınız kuralın çeşidini belirleyin." yazisi kontrol edilir
+    * "Konum Bazlı" yazisi kontrol edilir
+    * "Cihaz Bazlı" yazisi kontrol edilir
+    * "Zaman Bazlı" yazisi kontrol edilir
+
+  @Kurallar
+  Scenario: 021 Kurallar zamanlama kuralı ikinci adımda iptal edilmesinin kontrol edilmesi
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "KURAL EKLE" textine basilir
+    * "Zaman Bazlı" textine basilir
+    * Kural başlangıç saati 1 saat ileri set edilir
+    * Kural başlangıç saati 1 dakika ileri set edilir
+    * Kural gününü "Thu" olarak ayarlanır
+    * "SONRAKİ ADIM" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kuralınızın sonucunu belirleyin" yazisi kontrol edilir
+    * "Sonuç 1" yazisi kontrol edilir
+    * Kurallar "Cihaz Seçin" butonuna basilir
+    * "Lamba" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Aç" set edilir
+    * "Seç" textine basilir
+    * "KAYDET" butonuna basilir
+    * "Sonuç 1: Lamba" yazisi kontrol edilir
+    * "SONUÇ EKLE" yazisi kontrol edilir
+    * navigasyondan geri tusuna basilir
 #    * "İptal etmek istiyor musunuz?" yazisi kontrol edilir
 #    * "HAYIR" yazisi kontrol edilir
 #    * "EVET" yazisi kontrol edilir
 #    * "EVET" butonuna basilir
-#    * Appbar "Kural Ekle" texti kontrol edilir
-#    * "Oluşturacağınız kuralın çeşidini belirleyiniz." yazisi kontrol edilir
-#    * "Belirlediğiniz senaryoya göre cihazlara yönelik aksiyon alabiliriz." yazisi kontrol edilir
-#    * "Konuma Bağlı" yazisi kontrol edilir
-#    * "Cihaz" yazisi kontrol edilir
-#    * "Zamanlama" yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario: 022 Kurallar zamanlama kuralı isim verme adımında iptal edilmesi
-#    * Uygulamaya "mobilotomasyon3@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "KURAL EKLE" textine basilir
-#    * "Zamanlama" textine basilir
-#    * Kural başlangıç saati 1 saat ileri set edilir
-#    * 5 saniye bekle
-#    * Kural başlangıç saati 2 dakika ileri set edilir
-#    * 5 saniye bekle
-#    * Kural gününü "Mon" olarak ayarlanır
-#    * 5 saniye bekle
-#    * Kural gününü "Tue" olarak ayarlanır
-#    * 5 saniye bekle
-#    * "SONRAKİ" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kuralınızın sonucunu belirleyin." yazisi kontrol edilir
-#    * "Sonuç 1" yazisi kontrol edilir
-#    * "Cihaz Seçin" yazisi kontrol edilir
-#    * "Cihaz Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Priz" textine basilir
-#    * "Cihaz Sonucunu Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Açık" texti listeden seçilir
-#    * "KAYDET" butonuna basilir
-#    * "Sonuç 1: Priz" yazisi kontrol edilir
-#    * "Sonuç Ekle" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kuralı şimdi etkinleştirin" yazisi kontrol edilir
-#    * Kural adi "İptal edilecek kural" girilir
-#    * navigasyondan geri tusuna basilir
-#    * 5 saniye bekle
+    * Appbar "Kural Ekle" texti kontrol edilir
+    * "Oluşturacağınız kuralın çeşidini belirleyin." yazisi kontrol edilir
+    * "Konum Bazlı" yazisi kontrol edilir
+    * "Cihaz Bazlı" yazisi kontrol edilir
+    * "Zaman Bazlı" yazisi kontrol edilir
+
+  @Kurallar
+  Scenario: 022 Kurallar zamanlama kuralı isim verme adımında iptal edilmesi
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "KURAL EKLE" textine basilir
+    * "Zaman Bazlı" textine basilir
+    * Kural başlangıç saati 1 saat ileri set edilir
+    * Kural başlangıç saati 2 dakika ileri set edilir
+    * Kural gününü "Thu" olarak ayarlanır
+    * "SONRAKİ ADIM" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kuralınızın sonucunu belirleyin" yazisi kontrol edilir
+    * "Sonuç 1" yazisi kontrol edilir
+    * Kurallar "Cihaz Seçin" butonuna basilir
+    * "Priz" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Aç" set edilir
+    * "Seç" textine basilir
+    * "KAYDET" butonuna basilir
+    * "Sonuç 1: Priz" yazisi kontrol edilir
+    * "SONUÇ EKLE" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kuralı şimdi aktif hale getir" yazisi kontrol edilir
+    * Kural adi "İptal edilecek kural" girilir
+    * "Done" butonuna basilir
+    * navigasyondan geri tusuna basilir
 #    * "İptal etmek istiyor musunuz?" yazisi kontrol edilir
 #    * "HAYIR" yazisi kontrol edilir
 #    * "EVET" yazisi kontrol edilir
 #    * "EVET" butonuna basilir
-#    * Appbar "Kural Ekle" texti kontrol edilir
-#    * "Oluşturacağınız kuralın çeşidini belirleyiniz." yazisi kontrol edilir
-#    * "Belirlediğiniz senaryoya göre cihazlara yönelik aksiyon alabiliriz." yazisi kontrol edilir
-#    * "Konuma Bağlı" yazisi kontrol edilir
-#    * "Cihaz" yazisi kontrol edilir
-#    * "Zamanlama" yazisi kontrol edilir
-#
-#  @Kurallar
-#  Scenario: 023 Kurallar zamanlama kuralı oluşturmanın kontrol edilmesi
-#    * Uygulamaya "mobilotomasyon3@gmail.com" mail hesabiyla ve "12345678" sifresiyle login olunur
-#    * 20 saniye bekle
-#    * "KURALLAR" butonuna basilir
-#    * 5 saniye bekle
-#    * "KURAL EKLE" textine basilir
-#    * "Zamanlama" textine basilir
-#    * Kural başlangıç saati 1 saat ileri set edilir
-#    * 5 saniye bekle
-#    * Kural başlangıç saati 2 dakika ileri set edilir
-#    * 5 saniye bekle
-#    * Kural gününü "Mon" olarak ayarlanır
-#    * 5 saniye bekle
-#    * Kural gününü "Tue" olarak ayarlanır
-#    * 5 saniye bekle
-#    * "SONRAKİ" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kuralınızın sonucunu belirleyin." yazisi kontrol edilir
-#    * "Sonuç 1" yazisi kontrol edilir
-#    * "Cihaz Seçin" yazisi kontrol edilir
-#    * "Cihaz Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Priz" textine basilir
-#    * "Cihaz Sonucunu Seçin" textine basilir
-#    * 5 saniye bekle
-#    * "Açık" texti listeden seçilir
-#    * "KAYDET" butonuna basilir
-#    * "Sonuç 1: Priz" yazisi kontrol edilir
-#    * "Sonuç Ekle" yazisi kontrol edilir
-#    * "SONRAKİ" butonuna basilir
-#    * "Kuralı şimdi etkinleştirin" yazisi kontrol edilir
-#    * Kural adi "Zaman Gelince Priz Aç" girilir
-#    * "KAYDET" butonuna basilir
-#    * 5 saniye bekle
-#    * "Zaman Gelince Priz Aç kuralı oluşturuldu!" yazisi kontrol edilir
-#    * "TAMAM" butonuna basilir
-#    * 5 saniye bekle
-#    * "Kurallar" yazisi kontrol edilir
-#    * "1 AKTİF" yazisi kontrol edilir
-#    * "1 KURAL" yazisi kontrol edilir
-#    * "KURAL EKLE" yazisi kontrol edilir
-#    * "Zaman Gelince Priz Aç" yazisi kontrol edilir
-#    * "Zaman Bazlı" yazisi kontrol edilir
-#    * Kural "1" için asagı ok tusuna basilir
-#    * "Priz" yazisi kontrol edilir
-#    * "Açık" yazisi kontrol edilir
-#    * Kural "1" için sil tusuna basilir
-#    * 5 saniye bekle
-#    * "Henüz kural oluşturmadınız." yazisi kontrol edilir
-#    * "Bu bölümden, cihazlarınızın belirlediğiniz konum, zaman ve cihaz bazlı senaryolara göre çalışmasını sağlayabilirsiniz." yazisi kontrol edilir
-#
+    * Appbar "Kural Ekle" texti kontrol edilir
+    * "Oluşturacağınız kuralın çeşidini belirleyin." yazisi kontrol edilir
+    * "Konum Bazlı" yazisi kontrol edilir
+    * "Cihaz Bazlı" yazisi kontrol edilir
+    * "Zaman Bazlı" yazisi kontrol edilir
+
+  @Kurallar
+  Scenario: 023 Kurallar zamanlama kuralı oluşturmanın kontrol edilmesi
+    * Uygulama resetlenir
+    * "KURALLAR" butonuna basilir
+    * "KURAL EKLE" textine basilir
+    * "Zaman Bazlı" textine basilir
+    * Kural başlangıç saati 1 saat ileri set edilir
+    * Kural başlangıç saati 2 dakika ileri set edilir
+    * Kural gününü "Mon" olarak ayarlanır
+    * Kural gününü "Tue" olarak ayarlanır
+    * "SONRAKİ ADIM" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kuralınızın sonucunu belirleyin" yazisi kontrol edilir
+    * "Sonuç 1" yazisi kontrol edilir
+    * Kurallar "Cihaz Seçin" butonuna basilir
+    * "Priz" set edilir
+    * "Seç" textine basilir
+    * Kurallar "Cihaz Koşulu Seçin" butonuna basilir
+    * "Aç" set edilir
+    * "Seç" textine basilir
+    * "KAYDET" butonuna basilir
+    * "Sonuç 1: Priz" yazisi kontrol edilir
+    * "SONUÇ EKLE" yazisi kontrol edilir
+    * "SONRAKİ ADIM" butonuna basilir
+    * "Kuralı şimdi aktif hale getir" yazisi kontrol edilir
+    * Kural adi "Zaman Gelince Priz Aç" girilir
+    * "Done" butonuna basilir
+    * "KAYDET" butonuna basilir
+    * "Kural ekleme başarıyla tamamlandı!" yazisi kontrol edilir
+    * "TAMAM" butonuna basilir
+    * "KURALLAR" yazisi kontrol edilir
+    * "1 Aktif" yazisi kontrol edilir
+    * "1 Kural" yazisi kontrol edilir
+    * "KURAL EKLE" yazisi kontrol edilir
+    * "Zaman Gelince Priz Aç" yazisi kontrol edilir
+    * "Zaman Bazlı" yazisi kontrol edilir
+    * Kural asagi ok tusuna basilir
+    * "Priz" yazisi kontrol edilir
+    * "Sil" butonuna basilir
+    * "Kuralı silmek istediğinize emin misiniz?" yazisi kontrol edilir
+    * Uyari popupi sil butonuna basilir
+    * "Kural bulunamadı" yazisi icerdigi kontrol edilir
+
   @Kurallar
   Scenario: 024 Kurallar Apollo Pro D7S için zamanlama kuralı oluşturmanın kontrol edilmesi
     * Uygulama resetlenir

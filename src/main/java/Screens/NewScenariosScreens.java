@@ -27,9 +27,6 @@ import static java.time.Duration.ofSeconds;
 
 
 public class NewScenariosScreens extends BaseScreen {
-    private static DriverManager AndroidDriverManager;
-    private Object AndroidDriver;
-
     public NewScenariosScreens(IOSDriver driver) {
         super(driver);
     }
@@ -369,8 +366,7 @@ public class NewScenariosScreens extends BaseScreen {
 
 
     public void clickProduct(String arg0) throws InterruptedException {
-//        waitVisibility().until(ExpectedConditions.attributeToBe(By.name(arg0),"name",arg0));
-//        waitVisibility().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id(arg0)));
+
         click_btn(By.xpath("//*[contains(@name,'" + arg0 + "')]"));
         System.out.println(arg0 + " ürününe girilir- PASS");
         //Thread.sleep(3000); //koray deneme amaçlı eklendi.
@@ -3600,8 +3596,8 @@ public class NewScenariosScreens extends BaseScreen {
         click_btn(By.xpath(btn_cookingTime));
         Thread.sleep(6000);
         List<WebElement> values = driver.findElementsByXPath("//XCUIElementTypePickerWheel");
-        String val1 = values.get(0).getAttribute("value");
-        String val2 = values.get(1).getAttribute("value");
+        values.get(0).getAttribute("value");
+        values.get(1).getAttribute("value");
         values.get(0).sendKeys(arg0);
         values.get(1).sendKeys(arg1);
         Thread.sleep(3000);

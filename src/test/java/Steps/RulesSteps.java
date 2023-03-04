@@ -31,11 +31,6 @@ public class RulesSteps extends BaseSteps {
         rulesScreens.Rules_clickRuleActivationButton();
     }
 
-    @Then("^Kural \"([^\"]*)\" için aktivasyon butonuna basilir$")
-    public void kuralAktivasyonButonunaBasilir(String arg0) throws Throwable {
-        rulesScreens.Rules_clickActivationButton(arg0);
-    }
-
     @Then("^Kural başlangıç saati (\\d+) saat ileri set edilir$")
     public void kuralBaşlangıçSaatiSaatIleriSetEdilir(int arg0)  throws InterruptedException{
         rulesScreens.Rules_setHour(arg0);

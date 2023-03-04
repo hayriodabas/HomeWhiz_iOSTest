@@ -142,6 +142,10 @@ public class BaseScreen<assertFalseDisplayed> {
         waitVisibility().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
         driver.findElement(by).sendKeys(value);
     }
+    public void clearTextField(By by) {
+        waitVisibility().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
+        driver.findElement(by).clear();
+    }
 
     protected void setValueElements(By by, int x, String value) {
         waitVisibility().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
